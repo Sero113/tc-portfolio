@@ -2503,6 +2503,7 @@ width: 100%;
 
 .what-is-vakra p{
     padding: 10px 0 0 30px;
+    font-weight: 400 !important;
 }
 
 .vakra-application{
@@ -2602,6 +2603,13 @@ width: 100%;
 
 .what-is-nyx p{
     padding: 10px 0 0 30px;
+
+}
+
+.what-is-nyx-1 p {
+    width: 90%;
+    color: #bbbbbb;
+    font-weight: 400 !important;
 }
 
 .what-is-nyx-1 span{
@@ -2630,6 +2638,8 @@ width: 100%;
     width: 80%;
     padding: 1rem 0 1rem 0;
 }
+
+
 
 .prototype{
     display: flex;
@@ -2663,6 +2673,7 @@ width: 100%;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    
 }
     
     .what-is-1 { grid-area: 1 / 1 / 2 / 2; }
@@ -2670,7 +2681,7 @@ width: 100%;
 
 .what-is-pulse-1 span{
     color: #ffffff;
-    font-weight: bold;
+    
 }
 
 .what-is-pulse-1 h1{
@@ -2686,8 +2697,17 @@ width: 100%;
     
 }
 
-.what-is-pulse p{
+
+
+.what-is-pulse p {
     padding: 10px 0 0 30px;
+    font-weight: 400 !important;
+}
+
+.pul-inspo p {
+    width: 100%;
+    text-align: left;
+    color: #bbbbbb;
 }
 
 
@@ -2916,6 +2936,11 @@ width: 100%;
     width: auto;
 }
 
+.what-is-pulse p {
+    padding: 10px 0 0 30px;
+    color: #bbbbbb;
+}
+
 .pul-inspo ul {
     display: flex;
     justify-content: center;
@@ -2977,6 +3002,14 @@ width: 100%;
     transform: translateY(0);
 }
 
+.bl-items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 10px !important;
+    padding: 0 0px 0px 0px;
+}
 
 /* This is the footer section of the page  */
 
