@@ -940,6 +940,27 @@ height: auto;
     width: 80%;
     padding: 1rem 0 1rem 0;
 }
+.noir-lux-dev{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.noir-lux-dev h1{
+    padding-top: 50px;
+}
+.noir-lux-dev p{
+    width: 60%;
+    text-align: center;
+}
+
+
+.noir-lux-dev img{
+    width: 60%;
+    padding: 1rem 0 1rem 0;
+    
+}
 
 .prototype{
     display: flex;
