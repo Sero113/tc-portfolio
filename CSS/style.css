@@ -981,15 +981,15 @@ padding: 20px 122px;
 
 
 .dssn-1 img{
-max-height: 700px;
+max-height: auto;
 width: 100%;
 }
 .dssn-2 img{
-max-height: 700px;
+max-height: auto;
 width: 100%;
 }
 .dssn-2 video{
-max-height: 700px;
+max-height: auto;
 width: 100%;
 }
 
@@ -1244,19 +1244,8 @@ footer p{
 
     
             
-    .challenge-solution li {
-        width: 100%;
-        font-size: 13px;
-        text-align: center;
-        padding-bottom: 40px;
-    }
 
-    .challenge-solution p {
-        width: 100%;
-        text-align: center;
-        padding: 0 10px;
-        color: #989898;
-    }
+   
 
     .challenge-solution{
     text-align: center;
@@ -2447,15 +2436,15 @@ footer p{
             justify-content: center;
             justify-content: space-around;
             flex-direction: column;
-            
             margin: 0;
+            padding: 40px 0 0 40px !important;
     }
-            
+   
     .challenge-solution li {
         width: 100%;
         font-size: 13px;
-        text-align: center;
-        padding: 40px;
+        text-align: left;
+        padding: 40px 40px 0px 0px !important;
     }
 
     .challenge-solution p {
