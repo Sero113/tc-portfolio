@@ -5,13 +5,15 @@
 }
 
 
+
+
 :root{
 
     h1{
         font-size: 2.986em;
         line-height: 1.65;
         font-weight: 600;
-        color: #000000;
+        color: #fff;
         font-family: "Inter", sans-serif;
     }
 
@@ -19,8 +21,8 @@
         font-size: 2.488rem;
         line-height: 1.65;
         font-weight: 500;
-        text-align: center;
-        color: #000000;
+        text-align: left;
+        color: #fff;
         font-family: "Inter", sans-serif;
         
     }
@@ -30,21 +32,21 @@
         font-size: 2.074rem;
         line-height: 1.65;
         font-weight: 400;
-        color: #000000;
+        color: #fff;
         font-family: "Inter", sans-serif;
     }
 
     h4{
         font-size: 1.728rem;
         line-height: 1.65;
-        color: #000000;
+        color: #fff;
         font-family: "Inter", sans-serif;
     }
 
     h5{
         font-size: 1.44rem;
         line-height: 1.65;
-        color: #000000;
+        color: #fff;
         font-family: "Inter", sans-serif;
     }
 
@@ -74,11 +76,11 @@ a {
 }
 
 body{
-background-color: #fffffffa;
+background-color: #111111;
 }
 
 .header{
-background-color: #ffffff;
+background-color: #050505;
 box-shadow: 0 0 10px rgba(0, 0, 0, .09);
 }
 
@@ -113,14 +115,34 @@ box-shadow: 0 0 10px rgba(0, 0, 0, .09);
 
 .nav-item {
     margin-left: 3rem;
+    
+}
+.nav-item-2 {
+    margin-left: 3rem;
+    width: 100px;
+  
 }
 
-.nav-link{
+
+.nav-item-2 img {
+    width: 10px; /* Set a fixed size for the arrow */
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth rotation and glow transition */
+}
+
+.nav-item-2:hover img {
+    transform: rotate(44.5deg); /* Rotate arrow 90 degrees */
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1)); /* Add a subtle white glow */
+}
+
+.nav-link {
     font-size: 1rem;
-    font-weight: 400;
-    color: #000000;
+    font-weight: 300;
+    color: #fff;
     font-family: "Inter", sans-serif;
     transition: all 0.3s ease-out;
+    display: flex;
+    gap: 4px;
 }
 
   
@@ -129,7 +151,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, .09);
     height: 2px;
     content: "";
     position: absolute;
-    background-color: #000000;
+    background-color: #fff;
   }
   
   .nav-link-ltr::before {
@@ -149,7 +171,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, .09);
   }
 
 .nav-link:hover{
-    color: #000000;
+    color: #BCBCBC;
 }
 
 .nav-logo img{
@@ -169,7 +191,7 @@ flex-direction: column;
     font-size: 14px;
     text-align: left;
     font-weight: 450;
-    color: #000;
+    color: #ffffff;
 }
 .nav-text p{
     color: #a0a0a0;
@@ -177,19 +199,21 @@ flex-direction: column;
     font-size: 11px;
 }
 
-.neonText span{
-    color: transparent;
-    background-image: linear-gradient(to left, #ecc71e, #3498db, #9b59b6, #f39c12);
-    -webkit-background-clip: text;
-    animation: animate 5s linear infinite;
-    -webkit-background-size: 500%;
-    background-size: 500%;
-    font-family: "DM Serif Display", serif;
-    font-weight: 500;
-    font-style: italic;
-    font-size: 1.3rem;
-  }
 
+
+
+  .neonText {
+ width: 100%;
+ padding-top: 6rem;
+}
+
+
+
+.highlight {
+    font-weight: bold; /* Make the text bold */
+    text-decoration: underline; /* Underline the text */
+    color: inherit; /* Keep the text color consistent with surrounding text */
+}
 .ban-bold span{
 font-weight: 600;
 }
@@ -205,6 +229,9 @@ font-weight: 600;
         background-position: 0 100%;
     }
 }
+
+
+ /*  This is the loading text animation on the home screen*/
 
 .text-focus-in {
 	-webkit-animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -238,6 +265,7 @@ font-weight: 600;
   }
   
 
+
 .banner{
     height: 300px;
     padding-top: 80px;
@@ -245,18 +273,12 @@ font-weight: 600;
     
 }
 
-.banner h3{
-text-align: center;
-font-weight: 500;
-font-size: 2.5rem;
-padding-top: 30px;
-line-height: 90px;
-font-family: "Poppins", sans-serif;
-}
+
+
 .banner h4{
 text-align: center;
-font-size: 1.2rem;
-font-weight: 300;
+font-size: 1.4rem;
+font-weight: 350;
 font-family: "Inter", sans-serif;
 }
 .banner p{
@@ -285,89 +307,6 @@ padding-bottom: 20px;
 }
 
 
-
-/* SOCIAL ICONS OF THE PAGE---------------> */
-
-.socials{
-    display: flex;
-    justify-content: center;
-}
-
-
-.icons ul  {
-    display: flex;
-    text-align: center;
-
-
-}
-
-
-.icons ul li {
-    padding: .4375rem;
-   
-}
-
-.icons ul li a i {
-    font-size: 25px;
-    padding: 10px;
-    background-color: #323232;
-    border-radius: 100%;
-    display: inline-block;
-    transition: background-color 0.5s ease-out 1ms;
-    
-
-}
-
-i{
-color: #fff;
-}
-
-.info{
-padding-top: 20px;
-
-}
-
-.icons ul li a i:hover{
-    transition: all 0.5s ease-out;
-    background-color: #646464;
-    
-}
-
-
-.tooltip {
-    position: relative;
-    
-  }
-
-.tooltip span{
-    font-size: 0.8em;
-    width: auto;
-}
-
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: auto;
-    background-color: rgb(52, 52, 52);
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    font-family: "Inter", sans-serif;
-  
-    /* Position the tooltip */
-    
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    right: 0;
-    top: 95%;
-    
-  }
-  
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
-
   /* ABOUT ME AND DETAILS------------> */
 
   .what-is-about-me {
@@ -394,20 +333,106 @@ padding-top: 20px;
     width: 90%;
 }
 .what-is-about-1 span{
-    color: #000000;
-    width: 90%;
+    color: #ffffff;
+    padding-left: 30px;
+}
+.what-is-about-1 img{
+    height: auto !important;
+    width: 120px !important;
+    padding-left: 30px;
 }
 .what-is-about-2 img{
     height: auto;
     width: 70%;
-    padding: 120px 0 0 30px;
-    
-    
+    padding: 120px 30px 0 30px;
 }
 
 .what-is-about-1 p{
     padding: 10px 0 0 30px;
 }
+
+#line{
+    display: flex;
+    justify-content: center;
+}
+
+.separator {
+    height: 1px;
+    width: 100%; /* Thickness of the line */
+    background-color: #333333;
+    padding: 0px 30px; 
+    margin: 2rem; 
+}
+
+.experience {
+    padding: 2rem 1rem;
+    background-color: #111111; /* Matches the dark background */
+    color: #ffffff; /* Light text on dark background */
+}
+
+.experience-item {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Align left and right */
+    align-items: flex-start; /* Align items at the top */
+    margin-bottom: 2rem;
+}
+
+.work-experience-title {
+    display: flex; /* Aligns items horizontally */
+    align-items: center; /* Vertically centers the items */
+    gap: 10px; /* Adds space between the dot and the text */
+    margin-bottom: 1.5rem; /* Space below the title */
+    padding-left: 50px;
+}
+
+.work-experience-title img {
+    width: 12px !important; /* Adjust dot size */
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.6)) 
+            drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)); /* Glow effect */
+}
+
+.experience-title {
+    font-size: 0.8rem; /* Adjust size as needed */
+    font-weight: 250; /* Semi-bold */
+    letter-spacing: 0.2px; /* Adds spacing between letters */
+    color: #989898 !important; /* Text color */
+    text-align: left; /* Aligns text to the left */
+    margin: 0; /* Removes default paragraph margin */
+}
+
+
+
+.company h2 {
+    padding-left: 30px;
+}
+
+.details {
+    max-width: 40%; /* Limit width for better readability */
+    text-align: left;
+    padding-right: 30px;
+     /* Ensure proper alignment */
+}
+
+.details .position {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.details .dates {
+    font-size: 0.9rem;
+    color: #989898; /* Lighter text for dates */
+    margin: 0.5rem 0;
+}
+
+.details .description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #989898; /* Improve readability */
+}
+
+
 
 
 
@@ -503,11 +528,6 @@ width: 100%;
 }
 
 /* This is the Start of The Branding Page Section  */
-
-
-
-
-
  
 .bl-items {
     display: grid;
@@ -565,7 +585,11 @@ width: 100%;
 
 .content h6{
     margin-bottom: 5px;
-    font-weight: 500;
+    font-weight: 550;
+}
+.content p{
+    margin-bottom: 5px;
+    font-weight: 200;
 }
 
 /* This is the contact section of the page  */
@@ -600,10 +624,13 @@ justify-content: center;
 }
 
 .mainwrapper-2{
-
-padding: 40px 0 50px 0;
+padding: 40px 0 0px 0;
 display: flex;
 justify-content: center;
+}
+.mainwrapper-2 img{
+width: 100%;
+height: auto;
 }
 
   .container{
@@ -749,6 +776,30 @@ justify-content: center;
   /* THIS IS THE PORTOFLIO PAGES SECTION OF THE PAGE!!!!!!------->  */
 /* This is the Work Page Section for Branding */
 
+.space-breaker{
+width: 100%;
+margin: 3rem;
+}
+
+.back-home{
+   display: flex;
+   justify-content: center; 
+}
+
+.back-home-btn, button{
+   width: 180px; 
+   height: 40px;
+   background-color: #fff;
+   margin: 20px 0px;
+   transition: all 0.3s ease-out;
+   
+   
+}
+
+.back-home-btn:hover{
+    background-color: #BCBCBC;
+}
+
 .what-is {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -761,7 +812,7 @@ justify-content: center;
     .what-is-2 { grid-area: 1 / 2 / 2 / 3; }
 
 .what-is span{
-    color: #000000;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -772,6 +823,7 @@ justify-content: center;
 .what-is-1 p{
     width: 90%;
     color: #989898;
+    
 }
 .what-is-2 img{
     height: auto;
@@ -782,193 +834,18 @@ justify-content: center;
 .what-is p{
     padding: 10px 0 0 30px;
 }
-.what-is-vakra {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-    
-    .what-is-1 { grid-area: 1 / 1 / 2 / 2; }
-    .what-is-2 { grid-area: 1 / 2 / 2 / 3; }
 
-.what-is-vakra-1 span h1{
-    color: #ffffff;
-    
-    font-weight: bold;
-}
 
-.what-is-vakra-1 h1{
-    text-align: left;
-    padding: 150px 0 0 30px;
-    
-}
-.what-is-vakra-1 p{
-    width: 90%;
-    color: #989898;
-    
-}
-.what-is-vakra-2 img{
-    height: auto;
-    width: 100%;
-}
 
-.what-is-vakra p{
-    padding: 10px 0 0 30px;
-}
 
-.vakra-application{
-display: flex;
-gap: .625rem;
-justify-content: center;
-padding: 20px 40px 20px 40px;
-}
 
-.app-1 img{
-    max-height: 800px;
-    width: auto;
-}
-.app-2 img{
-    max-height: 1200px;
-    width: auto;
-}
-.vakra-application-2{
-display: flex;
-gap: .625rem;
-justify-content: center;
-padding: 20px 40px 20px 40px;
-}
-
-.app-3 img{
-    max-height: 800px;
-    width: auto;
-}
-.app-4 img{
-    max-height: 1000px;
-    width: auto;
-}
-.vakra-application-3{
-display: flex;
-gap: .625rem;
-justify-content: center;
-padding: 20px 40px 20px 40px;
-}
-
-.app-4 img{
-    max-height: 800px;
-    width: auto;
-}
-.app-5 img{
-    max-height: 700px;
-    width: auto;
-}
-.vakra-application-4{
-display: flex;
-justify-content: center;
-}
-
-.app-6 {
-    background-image: url(/images/vakra-packaging.png);
-    background-position: center;
-    background-size: cover;
-    height: 600px;
-    width: 91%;
-}
 
 .brand-wrapper img{
 max-width: 100%;
 height: auto;
 }
 
-/* WHat is Nyx Section ------>  */
 
-.what-is-nyx {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-    
-    .what-is-1 { grid-area: 1 / 1 / 2 / 2; }
-    .what-is-2 { grid-area: 1 / 2 / 2 / 3; }
-
-
-
-.what-is-nyx-1 h1{
-    text-align: left;
-    padding: 150px 0 0 30px;
-}
-.what-is-nyx-1 h3{
-    text-align: left;
-    padding: 0px 0 0 30px;
-}
-.what-is-nyx-1 p{
-    width: 90%;
-    color: #989898;
-    
-}
-.what-is-nyx-2 img{
-    height: auto;
-    width: 100%;
-    
-    
-}
-
-.what-is-nyx p{
-    padding: 10px 0 0 30px;
-}
-
-.what-is-nyx-1 span{
-    color: #000000;
-    
-    font-weight: bold;
-}
-
-.nyx-development{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top:40px;
-}
-.nyx-development h1{
-    padding: 50px;
-    color: #000 !important;
-}
-.nyx-development p{
-    width: 60%;
-    text-align: center;
-    color: #989898;
-}
-
-
-.nyx-development img{
-    width: 80%;
-    padding: 1rem 0 1rem 0;
-}
-.noir-lux-dev{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    
-}
-.noir-lux-dev h1{
-    padding-top: 50px;
-}
-.noir-lux-dev p{
-    width: 60%;
-    text-align: center;
-}
-
-
-.noir-lux-dev img{
-    width: 60%;
-    padding: 1rem 0 1rem 0;
-    
-}
 
 .prototype{
     display: flex;
@@ -990,48 +867,6 @@ height: auto;
 
 
 
-
-
-
-/* what is pulse section  */
-
-    
-.what-is-pulse {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-    
-    .what-is-1 { grid-area: 1 / 1 / 2 / 2; }
-    .what-is-2 { grid-area: 1 / 2 / 2 / 3; }
-
-.what-is-pulse-1 span{
-    color: #000000;
-    font-weight: bold;
-}
-
-.what-is-pulse-1 h1{
-    text-align: left;
-    padding: 150px 0 0 30px;
-}
-.what-is-pulse-1 p{
-    width: 90%;
-    color: #989898;
-}
-.what-is-pulse-2 img{
-    height: auto;
-    width: 100%;
-    
-}
-
-.what-is-pulse p{
-    padding: 10px 0 0 30px;
-    
-}
-
-
 .what-is-about-1 p{
     padding: 10px 0 0 30px;
 }
@@ -1040,7 +875,7 @@ height: auto;
     display: flex;
     justify-content: center;
     justify-content: space-around;
-    padding: 40px 0 0 0;
+    padding: 40px 0 0 70px
 }
 .challenge-solution img {
     max-height: 800px;
@@ -1053,49 +888,28 @@ height: auto;
 
 .challenge-solution p {
     width: 100%;
-    text-align: center;
-    color: #989898;
-}
-
-
-.vak-inspo ul {
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    padding: 40px 0 40px 40px;
-}
-.vak-inspo img {
-    max-height: 700px;
-    width: auto;
-}
-.vak-inspo li {
-    padding: 0px 30px 0 30px;
-}
-
-.vak-inspo h2 {
-    width: 100%;
-    text-align: left;
-}
-.vak-inspo p {
-    width: 100%;
     text-align: left;
     color: #989898;
 }
-
+.challenge-solution-2 h1 {
+    width: 100%;
+    text-align: left;
+  
+    padding-left: 122px;
+    width: 60%;
+}
+.challenge-solution-2 p {
+    width: 100%;
+    text-align: left;
+    color: #989898;
+    padding-left: 122px;
+    width: 60%;
+}
 
 .brand-wrapper h4{
     text-align: center;
     padding: 30px 0 0 30px;
 }
-
-
-
-
-
-
-
-
-
 
 .development{
     display: flex;
@@ -1106,9 +920,9 @@ height: auto;
 }
 
 
-.development img{
-    width: 80%;
-    padding: .625rem 0 .625rem 0;
+.development img {
+    width: 100;
+    padding: 20px 122px;
 }
 
 
@@ -1137,9 +951,9 @@ height: auto;
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    padding-top: 40px;
-    margin: 40px;
-    }
+    padding: 20px 122px;
+    margin: 0px;
+}
     
     .dsn-1 { grid-area: 1 / 1 / 2 / 2; }
     .dsn-2 { grid-area: 1 / 2 / 2 / 3; }
@@ -1156,51 +970,30 @@ height: auto;
 display: flex;
 gap: .625rem;
 justify-content: center;
-padding: 20px 40px 20px 40px;
+padding: 20px 122px;
+}
+
+.design-2 img{
+    width: 100%;
+    height: auto;
 }
 
 
 
 .dssn-1 img{
 max-height: 700px;
-width: auto;
+width: 100%;
 }
 .dssn-2 img{
 max-height: 700px;
-width: auto;
+width: 100%;
 }
 .dssn-2 video{
 max-height: 700px;
-width: auto;
+width: 100%;
 }
 
 
-.vak-application h2{
-    text-align: center;
-    padding: 20px;
-
-}
-
-
-
-    
-
-
-
-
-    
-
-
-.tools{
-    text-align: center;
-    margin: 40px 40px 40px 40px;
-
-}
-.tools img{
-    height: auto;
-    width: 45%;
-    text-align: center;
-}
 .abstract{
     text-align: center;
     margin: 40px 40px 40px 40px;
@@ -1219,94 +1012,78 @@ width: auto;
     justify-content: center;
 }
 
-
-
-.pulse-color-pallete {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   width: 100%;
-   gap: .625rem;
-   padding: 20px;
-}
-
-.pulse-color-pallete img{
-    height: auto;
-    width: 45%;
-}
-
-.row-1{
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-}
-
-.row-1 img{
-height: 300px;
-width: auto;
-}
-.row-2{
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-}
-
-.row-2 img{
-height: 300px;
-width: auto;
-}
-
-.pul-inspo ul {
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    padding: 40px 0 40px 40px;
+/* This is the UX/UI Project Structure */
+.what-is-uxui {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 0 122px;
+    margin-top: 32px;
+    }
     
-}
-.pul-inspo img {
-    height: auto;
-    min-width: 600px;
-}
-.pul-inspo li {
-    padding: 0px 30px 0 30px;
-    
+    .what-is-1 { grid-area: 1 / 1 / 2 / 2; }
+    .what-is-2 { grid-area: 1 / 2 / 2 / 3; }
+
+.what-is-uxxi span{
+    color: #ffffff;
+    font-weight: bold;
 }
 
-.pul-inspo h2 {
-    width: 100%;
+.what-is-uxui-1 h1{
     text-align: left;
+    padding: 10px 0 0 0px;
+    margin-top: 1rem;
 }
-.pul-inspo p {
-    width: 100%;
+.what-is-uxui-1 h6{
     text-align: left;
+    padding: 10px 0 0 0px;
+    margin-top: 1rem;
+}
+.what-is-uxui-1 p{
+    width: 90%;
     color: #989898;
+    padding: 10px 0 0 0px;
+}
+.what-is-uxui-2 {
+    display: flex;
+   justify-content: center;
+}
+.what-is-uxui-2 img{
+    margin: 32px 0;
+    height: 250px;
+    width: auto;
 }
 
-.pul-design{
+.uxui-work{
+margin-top: 2rem;
+padding: 0 122px;
+}
+
+.uxui-work h1{
+    text-align: left;
+    padding: 10px 0 0 0px;
+    margin-top: 6rem;
+}
+.uxui-work p{
+    text-align: left;
+    padding: 10px 0 0 0px;
+    margin-top: 2rem;
+    width: 63%;
+}
+
+.development-uxui img {
+    width: 100;
+    padding: 20px 0px;
+}
+
+.uxui-prototype{
 display: flex;
-justify-content: center;
-gap: .625rem;
-padding: 20px;
-
+width: 100%;
 }
-.pul-design img{
-height: auto;
-width: 45%;
 
-}
-.pul-design-1{
-display: flex;
-justify-content: center;
-gap: .625rem;
-padding: 20px;
 
-}
-.pul-design-1 img{
-height: auto;
-width: 90%;
-
-}
 
 /* This is the fade in animation of the page  */
 .fade-in-section {
@@ -1321,12 +1098,31 @@ width: 90%;
     transform: translateY(0);
 }
 
+.uxui-prototype {
+    display: block;
+}
+
+.uxui-prototype-2 {
+    display: none;
+}
+
+.uxui-prototype-link{
+    padding: 10px 0 0 0px;
+    margin-top: 2rem;
+}
+.uxui-prototype-link a{
+    color: #009FFD;
+    text-decoration: underline;
+}
+
+
+
 
 /* This is the footer section of the page  */
 
 footer{
-    background-color: #efefef;
-    color: #000;
+    background-color: #050505;
+    color: #ffffff;
     padding: .625rem;
     text-align: center;
     height: 100%;
@@ -1335,12 +1131,12 @@ footer{
 footer h6{
     font-size: .9rem !important;
     font-weight: 300;
-    color: #000 !important;
+    color: #ffffff !important;
 }
 footer p{
     font-size: .6rem !important;
     font-weight: 300;
-    color: #000 !important;
+    color: #ffffff !important;
 }
 
 
@@ -1372,12 +1168,30 @@ footer p{
         cursor: pointer;
         background-color: #ffffff;
         border: none;
+        width: 50px;
     }
 
     
 
     .nav-menu.active{
         background-color: #ffffff;
+    }
+    .nav-item-2 {
+        display: flex; /* Ensures the text and arrow align correctly */
+        align-items: center;
+        width: auto; /* Add space between the text and the arrow */
+        padding: 1rem;
+        text-align: center;
+        margin: 2.5rem 0; 
+        /* Add consistent padding for the list item */
+    }
+    
+    .nav-item-2 img {
+        display: none; /* This hides the arrow on mobile screens */
+    }
+    
+    .nav-item {
+        padding: 1rem; /* Add consistent padding for all nav items */
     }
     .bar{
         background-color: #000000;
@@ -1428,14 +1242,7 @@ footer p{
         padding: 80px 0 0 30px;
     }
 
-    .challenge-solution ul {
-            display: flex;
-            justify-content: center;
-            justify-content: space-around;
-            flex-direction: column;
-            padding: 0px 0 40px 0px;
-            margin: 0;
-            }
+    
             
     .challenge-solution li {
         width: 100%;
@@ -1457,86 +1264,11 @@ footer p{
             
     .challenge-solution h2 {
         font-size: 1.44rem;
-        text-align: center;
-        color: #000 !important;
-    }
-
-    .what-is-vakra {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(1, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 40px;
-    }
-
-    .what-is-vakra-1 h1{
         text-align: left;
-        padding: 80px 0 0 30px;
-    }
-        
-    .what-is-vakra-1 { grid-area: 1 / 1 / 2 / 2; }
-    .what-is-vakra-2 { grid-area: 2 / 1 / 3 / 2; }
-    
-    .what-is-vakra-1 h1 span{
-        color: #000000;
-        font-weight: bold;
-    }
-    
-    .what-is-vakra-1 h1{
-        text-align: left;
-        padding: 80px 0 0 30px;
-        
-        
-    }
-    .what-is-vakra-1 p{
-        width: 90%;
-        font-weight: bold;
-    }
-    .what-is-vakra-2 img{
-        height: auto;
-        width: 100%;
-        border-radius: 15px 0 0px 15px;
-    }
-    
-    .what-is-vakra p{
-        padding: 10px 0 0 30px;
-        color: #989898 !important;
+        color: #ffffff !important;
     }
 
-    .vak-inspo ul {
-        display: flex;
-        justify-content: center;
-        flex-direction: column-reverse;
-        justify-content: space-around;
-        padding: 5px 0 0px 5px;
-    }
-
-    .vakra-application {
-        display: flex;
-        gap: .625rem;
-        justify-content: center;
-        padding: 5px 10px 5px 10px;
-    }
-    .vakra-application-2 {
-        display: flex;
-        gap: .625rem;
-        justify-content: center;
-        padding: 5px 10px 5px 10px;
-    }
-    .vakra-application-3 {
-        display: flex;
-        gap: .625rem;
-        justify-content: center;
-        padding: 5px 10px 5px 10px;
-    }
-
-    .app-6 {
-        background-image: url(/images/vakra-packaging.png);
-        background-position: center;
-        background-size: cover;
-        height: 300px;
-        width: 96%;
-    }
+  
 
     .brand-wrapper img {
         margin: 0px 0 0 0;
@@ -1550,81 +1282,7 @@ footer p{
     
     }
 
-    .what-is-pulse {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 40px;
-    }
-        
-    .what-is-pulse-1 { grid-area: 1 / 1 / 2 / 2; }
-    .what-is-pulse-2 { grid-area: 1 / 2 / 2 / 3; }
-
-    
-    
-    .what-is-pulse-1 span{
-        color: #000000;
-        font-weight: bold;
-    }
-    
-    .what-is-pulse-1 h1{
-        text-align: left;
-        padding: 80px 0 0 30px;
-    }
-    .what-is-pulse-1 p{
-        width: 90%;
-        font-weight: bold;
-    }
-    .what-is-pulse-2 img{
-        height: auto;
-        width: 100%;
-        
-    }
-    
    
-
-    
-
-    .pul-inspo ul {
-        display: flex;
-        justify-content: center;
-        flex-direction: column-reverse;
-        justify-content: space-around;
-        padding: 10px 0 10px 10px;
-    }
-
-    .pul-design {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: .625rem;
-        padding: 20px;
-    }
-
-    .pul-design img {
-        height: auto;
-        width: 100%;
-    }
-
-    .pulse-color-pallete {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        gap: .625rem;
-        padding: 0px; 
-    }
-
-    .pul-design-1 {
-        display: flex;
-        justify-content: center;
-        gap: .625rem;
-        padding: 0px;
-    }
-
-    
 
 
     .development h1{
@@ -1639,7 +1297,7 @@ footer p{
     }
     .development img{
        margin: 0;
-       padding-bottom: 30px;
+       padding-bottom: 0px;
        
     }
 
@@ -1674,62 +1332,16 @@ footer p{
         padding: 10px 0 0 30px;
     }
 
-    .what-is-nyx {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 40px;
+    .experience-item {
+        flex-direction: column; /* Stack items vertically */
+        gap: 1rem; /* Add spacing between stacked items */
     }
-        
-    .what-is-nyx-1 { grid-area: 1 / 1 / 2 / 2; }
-    .what-is-nyx-2 { grid-area: 2 / 1 / 3 / 2; }
-    
-    
-    
-    .what-is-nyx-1 h1{
-        text-align: left;
-        padding: 70px 0 0 30px;
-    }
-    .what-is-nyx-1 p{
-        width: 90%;
-        font-weight: bold;
-    }
-    .what-is-nyx img{
-        height: auto;
-        width: 100%;
-        border-radius: 15px 0 0px 15px;
-        
-    }
-    
-    .what-is-nyx p{
-        padding: 10px 0 0 30px;
+    .details {
+        max-width: 100%;
+        padding-left: 30px; /* Use full width on smaller screens */
     }
 
-    .what-is-nyx-1 h1{
-        text-align: left;
-        padding: 80px 0 0 30px;
-    }
-    .what-is-nyx-2 img{
-        padding-top: 0 !important;
-    }
-
-    .nyx-development img {
-        width: 90%;
-        padding: 1rem 0 1rem 0;
-    }
-
-    .nyx-development h1 {
-        padding: 0px;
-        text-align: center;
-    }
-
-    .nyx-development p {
-        width: 100%;
-        text-align: center;
-        padding: 0 10px 0 10px;
-        color: #989898 !important;
-    }
+   
 
     .prototype h1 {
         padding: 10px 0 10px 0;
@@ -1817,11 +1429,11 @@ a {
 }
 
 body{
-    background-color: #fffffffa;
+    background-color: #111111;
 }
 
 .header{
-    background-color: #ffffff;
+    background-color: #050505;
 }
 
 .navbar {
@@ -1859,7 +1471,7 @@ body{
 .nav-link{
     font-size: 1rem;
     font-weight: 400;
-    color: #000000;
+    color: #ffffff;
     font-family: "Inter", sans-serif;
     transition: all 0.3s ease-out;
 }
@@ -1890,7 +1502,7 @@ body{
 }
 
 .nav-link:hover{
-    color: #3a3a3a;
+    color: #BCBCBC;
 }
 
 .nav-logo img{
@@ -1916,19 +1528,6 @@ body{
     text-align: left;
     font-size: 11px;
 }
-
-.neonText span{
-    color: transparent;
-    background-image: linear-gradient(to left, #ecc71e, #3498db, #9b59b6, #f39c12);
-    -webkit-background-clip: text;
-    animation: animate 5s linear infinite;
-    -webkit-background-size: 500%;
-    background-size: 500%;
-    font-family: "DM Serif Display", serif;
-    font-weight: 500;
-    font-style: italic;
-    font-size: 1.3rem;
-  }
 
 .ban-bold span{
     font-weight: 600;
@@ -1978,12 +1577,7 @@ body{
   }
   
 
-.banner{
-    height: 300px;
-    padding-top: 80px;
-    width: auto;
-    
-}
+
 
 .banner h3{
     text-align: center;
@@ -1998,7 +1592,7 @@ body{
     font-size: 1.2rem;
     font-weight: 300;
     font-family: "Inter", sans-serif;
-    color: #000;
+    color: #ffffff;
 }
 .banner p{
     color: #ffffff;
@@ -2006,15 +1600,6 @@ body{
     padding-bottom: 20px;
 }
 
- h3 span{
-    color: #000;
-    text-align: center;
-    font-style: bold;
-    font-weight: 400;
-    font-size: 5rem;
-    font-family: "DM Serif Display", serif;
-    font-style: italic;
-}
 
 .mainwrapper{
     height: auto;
@@ -2025,83 +1610,6 @@ body{
 
 
 
-/* SOCIAL ICONS OF THE PAGE---------------> */
-
-.socials{
-    display: flex;
-    justify-content: center;
-}
-
-
-.icons ul  {
-    display: flex;
-    text-align: center;
-
-
-}
-
-
-.icons ul li {
-    padding: .4375rem;
-   
-}
-
-.icons ul li a i {
-    font-size: 25px;
-    padding: 10px;
-    background-color: #323232;
-    border-radius: 100%;
-    display: inline-block;
-    transition: background-color 0.5s ease-out 1ms;
-}
-
-i{
-    color: #fff;
-}
-
-.info{
-    padding-top: 20px;
-}
-
-.icons ul li a i:hover{
-    transition: all 0.5s ease-out;
-    background-color: #646464;  
-}
-
-
-.tooltip {
-    position: relative;
-    
-}
-
-.tooltip span{
-    font-size: 0.8em;
-    width: auto;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: auto;
-    background-color: rgb(52, 52, 52);
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    font-family: "Inter", sans-serif;
-  
-    /* Position the tooltip */
-    
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    right: 0;
-    top: 95%;
-    
-}
-  
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
 
   /* ABOUT ME AND DETAILS------------> */
 
@@ -2123,20 +1631,20 @@ i{
 .what-is-about-1 h1{
     text-align: left;
     padding: 150px 0 0 30px;
-    color: #000;
+    color: #ffffff;
 }
 .what-is-about-1 p{
     color: #989898;
     width: 90%;
 }
 .what-is-about-1 span{
-    color: #000000 !important;
+    color: #ffffff !important;
     width: 90%;
 }
 .what-is-about-2 img{
     height: auto;
     width: 70%;
-    padding: 0px 0 0 30px;
+    padding: 0px 30px 0 30px;
     
     
 }
@@ -2334,13 +1842,11 @@ width: 100%;
     display: flex;
     justify-content: center;
 }
-
-.mainwrapper-2{
-
-    padding: 40px 0 50px 0;
-    display: flex;
-    justify-content: center;
+.contact-text h1{ 
+    color: #fff;
 }
+
+
 
   .container{
     max-width: 700px !important;
@@ -2479,6 +1985,104 @@ width: 100%;
     }
   }
 
+  /* This is the UX/UI Project Structure */
+.what-is-uxui {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 0px 0px 0px 40px;
+    margin-top: 32px;
+    }
+    
+    .what-is-1 { grid-area: 1 / 1 / 2 / 2; }
+    .what-is-2 { grid-area: 1 / 2 / 2 / 3; }
+
+.what-is-uxxi span{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.what-is-uxui-1 h1{
+    text-align: left;
+    padding: 10px 0 0 0px;
+    margin-top: 1rem;
+    color: #fff;
+    
+}
+.what-is-uxui-1 h2{
+    text-align: left;
+    padding: 10px 0 0 0px;
+    margin-top: 1rem;
+    color: #fff;
+}
+.what-is-uxui-1 h6{
+    text-align: left;
+    padding: 10px 0 0 0px;
+    margin-top: 1rem;
+}
+.what-is-uxui-1 p{
+    width: 50%;
+    color: #989898;
+    padding: 10px 0 0 0px;
+}
+.what-is-uxui-2 {
+    display: flex;
+   justify-content: center;
+}
+.what-is-uxui-2 img{
+    margin: 32px 0;
+    height: 250px;
+    width: 50%;
+    display: none;
+}
+
+.uxui-work{
+margin-top: 2rem;
+padding: 0 0px;
+}
+
+.uxui-work h1{
+    text-align: left;
+    padding: 10px 0 0 40px;
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #fff;
+}
+.uxui-work p{
+    text-align: left;
+    padding: 5px 40px 0 40px;
+    margin-top: 1rem;
+    width: 100%;
+    color: #989898;
+}
+
+.development-uxui img {
+    width: 100%;
+    padding: 20px 40px;
+}
+
+.uxui-prototype-link{
+    padding: 10px 0 0 40px;
+}
+
+
+    .uxui-prototype {
+        display: none;
+    }
+
+    .uxui-prototype-2 {
+        display: block;
+    }
+
+
+
+iframe{
+padding-left: 40px;
+}
+
+
 
 
   /* THIS IS THE PORTOFLIO PAGES SECTION OF THE PAGE!!!!!!------->  */
@@ -2496,7 +2100,7 @@ width: 100%;
     .what-is-2 { grid-area: 1 / 2 / 2 / 3; }
 
 .what-is span{
-    color: #000000;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -2518,87 +2122,11 @@ width: 100%;
     padding: 10px 0 0 30px;
     
 }
-.what-is-vakra {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
-    
-    .what-is-1 { grid-area: 1 / 1 / 2 / 2; }
-    .what-is-2 { grid-area: 1 / 2 / 2 / 3; }
 
 
 
-.what-is-vakra-1 h1{
-    text-align: left;
-    padding: 150px 0 0 30px;
-}
-.what-is-vakra-1 p{
-    width: 90%;
-    color: #bbbbbb;
-    
-}
-.what-is-vakra-2 img{
-    height: auto;
-    width: 100%;
-}
 
-.what-is-vakra p{
-    padding: 10px 0 0 30px;
-    font-weight: 400 !important;
-}
 
-.vakra-application{
-    display: flex;
-    gap: .625rem;
-    justify-content: center;
-    padding: 20px 40px 20px 40px;
-}
-
-.app-1 img{
-    max-height: 800px;
-    width: auto;
-}
-.app-2 img{
-    max-height: 1200px;
-    width: auto;
-}
-.vakra-application-2{
-    display: flex;
-    gap: .625rem;
-    justify-content: center;
-    padding: 20px 40px 20px 40px;
-}
-
-.app-3 img{
-    max-height: 800px;
-    width: auto;
-}
-.app-4 img{
-    max-height: 1000px;
-    width: auto;
-}
-.vakra-application-3{
-    display: flex;
-    gap: .625rem;
-    justify-content: center;
-    padding: 20px 40px 20px 40px;
-}
-
-.app-4 img{
-    max-height: 800px;
-    width: auto;
-}
-.app-5 img{
-    max-height: 700px;
-    width: auto;
-}
-.vakra-application-4{
-    display: flex;
-    justify-content: center;
-}
 
 
 
@@ -2606,79 +2134,6 @@ width: 100%;
     max-width: 100%;
     height: auto;
 }
-
-/* WHat is Nyx Section ------>  */
-
-.what-is-nyx {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
-    
-    .what-is-1 { grid-area: 1 / 1 / 2 / 2; }
-    .what-is-2 { grid-area: 1 / 2 / 2 / 3; }
-
-
-
-.what-is-nyx-1 h1{
-    text-align: left;
-    padding: 150px 0 0 30px;
-}
-.what-is-nyx-1 h3{
-    text-align: left;
-    padding: 0px 0 0 30px;
-}
-.what-is-nyx-1 p{
-    width: 90%;
-    
-}
-.what-is-nyx-2 img{
-    height: auto;
-    width: 100%;
-    
-    
-}
-
-.what-is-nyx p{
-    padding: 10px 0 0 30px;
-
-}
-
-.what-is-nyx-1 p {
-    width: 90%;
-    color: #989898;
-    font-weight: 400 !important;
-}
-
-.what-is-nyx-1 span{
-    color: #000000;
-    
-    font-weight: bold;
-}
-
-.nyx-development{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top:40px;
-}
-.nyx-development h1{
-    padding: 50px;
-}
-.nyx-development p{
-    width: 60%;
-    text-align: center;
-}
-
-
-.nyx-development img{
-    width: 80%;
-    padding: 1rem 0 1rem 0;
-}
-
 
 
 .prototype{
@@ -2699,62 +2154,6 @@ width: 100%;
      padding: 50px 0 50px 0;
  }
 
-
-
-
-
-
-/* what is pulse section  */
-
-    
-.what-is-pulse {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    
-}
-    
-    .what-is-1 { grid-area: 1 / 1 / 2 / 2; }
-    .what-is-2 { grid-area: 1 / 2 / 2 / 3; }
-
-
-
-.what-is-pulse-1 p{
-    width: 90%;
-}
-.what-is-pulse-2 img{
-    height: auto;
-    width: 100%;
-    
-}
-
-
-
-.what-is-pulse p {
-    padding: 10px 0 0 30px;
-    font-weight: 400 !important;
-    color: #989898;
-}
-
-.pul-inspo p {
-    width: 100%;
-    text-align: left;
-    color: #989898;
-}
-
-
-.what-is-about-1 p{
-    padding: 10px 0 0 30px;
-}
-
-.challenge-solution ul {
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    padding: 40px 0 0 0;
-}
 .challenge-solution img {
     max-height: 800px;
     width: auto;
@@ -2770,44 +2169,10 @@ width: 100%;
     color: #989898;
 }
 
-
-.vak-inspo ul {
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    padding: 40px 0 40px 40px;
-}
-.vak-inspo img {
-    max-height: 700px;
-    width: auto;
-}
-.vak-inspo li {
-    padding: 0px 30px 0 30px;
-}
-
-.vak-inspo h2 {
-    width: 100%;
-    text-align: left;
-}
-.vak-inspo p {
-    width: 100%;
-    text-align: left;
-    color: #989898;
-}
-
-
 .brand-wrapper h4{
     text-align: center;
     padding: 30px 0 0 30px;
 }
-
-
-
-
-
-
-
-
 
 
 .development{
@@ -2815,12 +2180,12 @@ width: 100%;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top:40px;
+    margin: 40px 10px 0 10px;
 }
 
 
 .development img{
-    width: 80%;
+    width: 100%;
     padding: .625rem 0 .625rem 0;
 }
 
@@ -2850,9 +2215,11 @@ width: 100%;
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    padding-top: 40px;
+    padding: 0px;
     margin: 40px;
 }
+
+
     
     .dsn-1 { grid-area: 1 / 1 / 2 / 2; }
     .dsn-2 { grid-area: 1 / 2 / 2 / 3; }
@@ -2869,51 +2236,32 @@ width: 100%;
     display: flex;
     gap: .625rem;
     justify-content: center;
-    padding: 20px 40px 20px 40px;
+    padding: 10px 10px 10px 10px;
 }
+
+.design-2 img{
+    width: 100%;
+    height: auto;
+}
+
 
 
 
 .dssn-1 img{
     max-height: 700px;
-    width: auto;
+    width: 100%;
 }
 .dssn-2 img{
     max-height: 700px;
-    width: auto;
+    width: 100%;
 }
 .dssn-2 video{
     max-height: 700px;
-    width: auto;
-}
-
-
-.vak-application h2{
-    text-align: center;
-    padding: 20px;
-
+    width: 100%;
 }
 
 
 
-    
-
-
-
-
-    
-
-
-.tools{
-    text-align: center;
-    margin: 40px 40px 40px 40px;
-
-}
-.tools img{
-    height: auto;
-    width: 45%;
-    text-align: center;
-}
 .abstract{
     text-align: center;
     margin: 40px 40px 40px 40px;
@@ -2934,20 +2282,7 @@ width: 100%;
 
 
 
-.pulse-color-pallete {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   width: 100%;
-   gap: .625rem;
-   padding: 20px;
-}
 
-.pulse-color-pallete img{
-    height: auto;
-    width: 45%;
-}
 
 .row-1{
     display: flex;
@@ -2972,54 +2307,6 @@ width: 100%;
 
 
 
-.pul-inspo ul {
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    padding: 40px 0 40px 40px;
-}
-.pul-inspo img {
-    max-height: 600px;
-    width: auto;
-}
-.pul-inspo li {
-    padding: 0px 30px 0 30px;
-}
-
-.pul-inspo h2 {
-    width: 100%;
-    text-align: left;
-}
-.pul-inspo p {
-    width: 100%;
-    text-align: left;
-}
-
-.pul-design{
-    display: flex;
-    justify-content: center;
-    gap: .625rem;
-    padding: 20px;
-
-}
-.pul-design img{
-    height: auto;
-    width: 45%;
-
-}
-.pul-design-1{
-    display: flex;
-    justify-content: center;
-    gap: .625rem;
-    padding: 20px;
-
-}
-.pul-design-1 img{
-    height: auto;
-    width: 90%;
-
-}
-
 /* This is the fade in animation of the page  */
 .fade-in-section {
     opacity: 0;
@@ -3042,11 +2329,24 @@ width: 100%;
     padding: 0 0px 0px 0px;
 }
 
+.challenge-solution-2 h1 {
+    width: 100%;
+    text-align: left !important;
+    padding-left: 30px;
+    width: 60%;
+    color: #fff;
+}
+.challenge-solution-2 p {
+    width: 100%;
+    text-align: left !important;
+    color: #989898;
+    padding-left: 30px;
+    width: 60%;
+}
 /* This is the footer section of the page  */
 
 footer{
-    background-color: #efefef;
-    color: #000;
+    background-color: #000000;
     padding: .625rem;
     text-align: center;
     height: 100%;
@@ -3062,13 +2362,15 @@ footer p{
 }
 
 
+
+
 @media only screen and (max-width: 768px) {
     .nav-menu {
         position: fixed;
         left: -100%;
         top: 5rem;
         flex-direction: column;
-        background-color: #fff;
+        background-color: #101010;
         width: 100%;
         border-radius: 10px;
         text-align: center;
@@ -3088,20 +2390,16 @@ footer p{
     .hamburger {
         display: block;
         cursor: pointer;
-        background-color: #ffffff;
+        background-color: #00000000;
         border: none;
     }
 
     .nav-menu.active{
-        background-color: #ffffff;
+        background-color: #111111;
     }
     .bar{
-        background-color: #000000;
+        background-color: #ffffff;
     }
-    
-
-    
-
 
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
@@ -3149,7 +2447,7 @@ footer p{
             justify-content: center;
             justify-content: space-around;
             flex-direction: column;
-            padding: 0px 0 40px 0px;
+            
             margin: 0;
     }
             
@@ -3162,164 +2460,26 @@ footer p{
 
     .challenge-solution p {
         width: 100%;
-        text-align: center;
-        padding: 0 10px;
+        text-align: left;
+        padding: 0 0px;
         color: #989898 !important;
 
     }
 
-    .challenge-solution{
-    text-align: center;
-    }
+   
             
     .challenge-solution h2 {
         font-size: 1.44rem;
-        text-align: center;
-    }
-
-    .what-is-vakra {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(1, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 40px;
-    }
-
-    .what-is-vakra-1 h1{
         text-align: left;
-        padding: 80px 0 0 30px;
-    }
-        
-    .what-is-vakra-1 { grid-area: 1 / 1 / 2 / 2; }
-    .what-is-vakra-2 { grid-area: 2 / 1 / 3 / 2; }
-    
-   
-    
-    .what-is-vakra-1 h1{
-        text-align: left;
-        padding: 80px 0 0 30px;
         
     }
-    .what-is-vakra-1 p{
-        width: 90%;
-        font-weight: bold;
-    }
-    .what-is-vakra-2 img{
-        height: auto;
-        width: 100%;
-        border-radius: 15px 0 0px 15px;
-    }
+
     
-    .what-is-vakra p{
-        padding: 10px 0 0 30px;
-    }
-
-    .vak-inspo ul {
-        display: flex;
-        justify-content: center;
-        flex-direction: column-reverse;
-        justify-content: space-around;
-        padding: 5px 0 0px 5px;
-    }
-
-    .vakra-application {
-        display: flex;
-        gap: .625rem;
-        justify-content: center;
-        padding: 5px 10px 5px 10px;
-    }
-    .vakra-application-2 {
-        display: flex;
-        gap: .625rem;
-        justify-content: center;
-        padding: 5px 10px 5px 10px;
-    }
-    .vakra-application-3 {
-        display: flex;
-        gap: .625rem;
-        justify-content: center;
-        padding: 5px 10px 5px 10px;
-    }
-
-   
-
-    .brand-wrapper img {
-        margin: 0px 0 0 0;
-    }
 
     .page-structure p{
         width: 100%;
     
     }
-
-    .what-is-pulse {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 40px;
-    }
-        
-    .what-is-pulse-1 { grid-area: 1 / 1 / 2 / 2; }
-    .what-is-pulse-2 { grid-area: 2 / 1 / 3 / 2; }
-    
-   
-    
-    
-    .what-is-pulse-1 p{
-        width: 90%;
-        font-weight: bold;
-    }
-    .what-is-pulse-2 img{
-        height: auto;
-        width: 100%;
-        border-radius: 15px 0 0px 15px;
-    }
-    
-  
-
-    
-
-    .pul-inspo ul {
-        display: flex;
-        justify-content: center;
-        flex-direction: column-reverse;
-        justify-content: space-around;
-        padding: 10px 0 10px 10px;
-    }
-
-    .pul-design {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: .625rem;
-        padding: 20px;
-    }
-
-    .pul-design img {
-        height: auto;
-        width: 100%;
-    }
-
-    .pulse-color-pallete {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        gap: .625rem;
-        padding: 0px; 
-    }
-
-    .pul-design-1 {
-        display: flex;
-        justify-content: center;
-        gap: .625rem;
-        padding: 0px;
-    }
-
-    
-
 
     .development h1{
         padding-bottom: 0px;
@@ -3331,12 +2491,7 @@ footer p{
         text-align: center;
         width: 80%;
     }
-    .development img{
-       margin: 0;
-       padding-bottom: 30px;
-       
-    }
-
+  
     .what-is-about-me {
         display: grid;
         grid-template-columns: 1fr;
@@ -3347,8 +2502,6 @@ footer p{
         
     .what-is-about-1 { grid-area: 1 / 1 / 2 / 2; }
     .what-is-about-2 { grid-area: 2 / 1 / 3 / 2; }
-    
-    
     
     
     .what-is-about-1 h1{
@@ -3364,61 +2517,7 @@ footer p{
         border-radius: 15px 0 0px 15px;
     }
     
-    .what-is-about-1 p{
-        padding: 10px 0 0 30px;
-    }
 
-    .what-is-nyx {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 40px;
-    }
-        
-    .what-is-nyx-1 { grid-area: 1 / 1 / 2 / 2; }
-    .what-is-nyx-2 { grid-area: 2 / 1 / 3 / 2; }
-    
-    
-    
-    .what-is-nyx-1 h1{
-        text-align: left;
-        padding: 70px 0 0 30px;
-    }
-    .what-is-nyx-1 p{
-        width: 90%;
-        font-weight: bold;
-    }
-    .what-is-nyx img{
-        height: auto;
-        width: 100%;
-        border-radius: 15px 0 0px 15px;
-        
-    }
-    
-    .what-is-nyx p{
-        padding: 10px 0 0 30px;
-    }
-
-    .what-is-nyx-1 h1{
-        text-align: left;
-        padding: 80px 0 0 30px;
-    }
-    .what-is-nyx-2 img{
-        padding-top: 0 !important;
-    }
-
-    .nyx-development img {
-        width: 90%;
-        padding: 1rem 0 1rem 0;
-    }
-
-    .nyx-development h1 {
-        padding: 0px;
-        text-align: center;
-    }
-
-   
 
     .prototype h1 {
         padding: 10px 0 10px 0;
@@ -3428,17 +2527,6 @@ footer p{
     .prototype h2 {
         padding: 10px 0 10px 0;
     }
-
-    .what-is-about-2 img {
-        height: auto;
-        width: 95%;
-        border-radius: 15px 0 0px 15px;
-    }
-
-   
-    
-
-   
 
     
 
@@ -3453,12 +2541,7 @@ footer p{
     }
 
    
-    .banner{
-        height: 300px;
-        padding-top: 80px;
-        width: auto;
-        
-    }
+  
     
     .banner h3{
         text-align: center;
@@ -3481,7 +2564,7 @@ footer p{
     }
     
      h3 span{
-        color: #000;
+        color: #ffffff;
         text-align: center;
         font-style: bold;
         font-weight: 400;
@@ -3508,80 +2591,6 @@ footer p{
         justify-content: center;
     }
     
-    
-    .icons ul  {
-        display: flex;
-        text-align: center;
-    
-    
-    }
-    
-    
-    .icons ul li {
-        padding: .4375rem;
-       
-    }
-    
-    .icons ul li a i {
-        font-size: 25px;
-        padding: 10px;
-        background-color: #323232;
-        border-radius: 100%;
-        display: inline-block;
-        transition: background-color 0.5s ease-out 1ms;
-        
-    
-    }
-    
-    i{
-    color: #fff;
-    }
-    
-    .info{
-    padding-top: 20px;
-    
-    }
-    
-    .icons ul li a i:hover{
-        transition: all 0.5s ease-out;
-        background-color: #646464;
-        
-    }
-    
-    
-    .tooltip {
-        position: relative;
-        
-      }
-    
-    .tooltip span{
-        font-size: 0.8em;
-        width: auto;
-    }
-    
-      .tooltip .tooltiptext {
-        visibility: hidden;
-        width: auto;
-        background-color: rgb(52, 52, 52);
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px;
-        font-family: "Inter", sans-serif;
-      
-        /* Position the tooltip */
-        
-        position: absolute;
-        z-index: 1;
-        left: 0;
-        right: 0;
-        top: 95%;
-        
-      }
-      
-      .tooltip:hover .tooltiptext {
-        visibility: visible;
-      }
 
     .banner h4{
         font-size: .90rem;
@@ -3592,9 +2601,9 @@ footer p{
     }
     .neonText span{
         font-size: 1.1rem;
-       
     }
 
+    
     .nav-text{
         display: none;
     }
@@ -3605,22 +2614,8 @@ footer p{
 }
 
 
-.design {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    padding-top: 40px;
-    margin: 10px;
-}
 
-.design-2 {
-    display: flex;
-    gap: .625rem;
-    justify-content: center;
-    padding: 5px 10px 5px 10px;
-}
+
 
 .contact-text {
     padding-top: 100px;
@@ -3636,18 +2631,10 @@ footer p{
 .mainwrapper{
     padding-top: 100px;
 }
-    /* This is the Footer section of the page------------> */
-
-
 
 
 }
    
-    
-
-   
-
-    
 
     .page-structure p {
         text-align: center;
@@ -3661,10 +2648,9 @@ footer p{
 
    
     .banner{
-        height: 300px;
-        padding-top: 80px;
+        height: 250px;
+        padding-top: 170px;
         width: auto;
-        
     }
     
     .banner h3{
@@ -3706,89 +2692,12 @@ footer p{
         padding-top: 100px;
     }
     
-    
-    
-    /* SOCIAL ICONS OF THE PAGE---------------> */
-    
-    .socials{
-        display: flex;
-        justify-content: center;
-    }
-    
-    
-    .icons ul  {
-        display: flex;
-        text-align: center;
-    
+    .mainwrapper-2 img{
+    width: 100%;
+    height: auto;    
     
     }
     
-    
-    .icons ul li {
-        padding: .4375rem;
-       
-    }
-    
-    .icons ul li a i {
-        font-size: 25px;
-        padding: 10px;
-        background-color: #323232;
-        border-radius: 100%;
-        display: inline-block;
-        transition: background-color 0.5s ease-out 1ms;
-        
-    
-    }
-    
-    i{
-    color: #fff;
-    }
-    
-    .info{
-    padding-top: 20px;
-    
-    }
-    
-    .icons ul li a i:hover{
-        transition: all 0.5s ease-out;
-        background-color: #646464;
-        
-    }
-    
-    
-    .tooltip {
-        position: relative;
-        
-      }
-    
-    .tooltip span{
-        font-size: 0.8em;
-        width: auto;
-    }
-    
-      .tooltip .tooltiptext {
-        visibility: hidden;
-        width: auto;
-        background-color: rgb(52, 52, 52);
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px;
-        font-family: "Inter", sans-serif;
-      
-        /* Position the tooltip */
-        
-        position: absolute;
-        z-index: 1;
-        left: 0;
-        right: 0;
-        top: 95%;
-        
-      }
-      
-      .tooltip:hover .tooltiptext {
-        visibility: visible;
-      }
 
     .banner h4{
         font-size: .90rem;
@@ -3797,20 +2706,12 @@ footer p{
     .banner br{
        display: none;
     }
-    .neonText span{
-        font-size: 1.1rem;
-       
-    }
+   
 
     .nav-text{
         display: none;
     }
     
-
-.brand-wrapper img{
-    padding-top: 60px;
-}
-
 
 .design {
     display: grid;
@@ -3818,24 +2719,9 @@ footer p{
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    padding-top: 40px;
-    margin: 10px;
+    padding-top: 0px;
+    margin: 0px 10px;
 }
-
-.design-2 {
-    display: flex;
-    gap: .625rem;
-    justify-content: center;
-    padding: 5px 10px 5px 10px;
-}
-
-.contact-text {
-    padding-top: 100px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
 
 
 
@@ -3843,9 +2729,6 @@ footer p{
 .mainwrapper{
     padding-top: 100px;
 }
-    /* This is the Footer section of the page------------> */
-
-
 
 
 }
