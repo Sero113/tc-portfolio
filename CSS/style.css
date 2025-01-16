@@ -981,8 +981,9 @@ padding: 20px 122px;
 
 
 .dssn-1 img{
-max-height: auto;
-width: 100%;
+min-height: 100%;
+width: auto;
+object-fit: cover;
 }
 .dssn-2 img{
 max-height: auto;
@@ -2220,13 +2221,15 @@ padding-left: 40px;
     
    
 }
-
-.design-2{
+.design-2 {
     display: flex;
-    gap: .625rem;
+    gap: 0.625rem;
     justify-content: center;
-    padding: 10px 10px 10px 10px;
+    align-items: flex-start; /* Or stretch */
+    padding: 10px;
+    flex-wrap: wrap; /* Ensures wrapping on small screens */
 }
+
 
 .design-2 img{
     width: 100%;
@@ -2234,11 +2237,11 @@ padding-left: 40px;
 }
 
 
-
-
 .dssn-1 img{
     max-height: 700px;
     width: 100%;
+    padding: none;
+
 }
 .dssn-2 img{
     max-height: 700px;
