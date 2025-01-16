@@ -32,3 +32,18 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const videos = document.querySelectorAll(".autoplay-video");
+
+    videos.forEach((video) => {
+        video.muted = true; // Ensure the video is muted
+        video.playsInline = true; // Plays inline without fullscreen
+        video.autoplay = true; // Enable autoplay
+
+        // Try playing the video programmatically
+        video.play().catch((error) => {
+            console.error("Autoplay failed:", error);
+        });
+    });
+});
