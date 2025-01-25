@@ -47,3 +47,123 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('.mini-nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+  
+      const targetId = this.getAttribute('href');
+      document.querySelector(targetId).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  });
+
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.mini-nav a');
+  
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+        const id = section.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const section = document.querySelector(".mainwrapper-2");
+    const miniNav = document.querySelector(".mini-nav");
+  
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Show mini-nav when section is in view
+            miniNav.classList.add("active");
+          } else {
+            // Hide mini-nav when section is out of view
+            miniNav.classList.remove("active");
+          }
+        });
+      },
+      {
+        root: null, // Use viewport
+        threshold: 0.2, // Trigger when 20% of the section is in view
+      }
+    );
+  
+    // Observe the target section
+    observer.observe(section);
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          miniNav.classList.add("active");
+        } else {
+          miniNav.classList.remove("active");
+        }
+      });
+    },
+    {
+      root: null, // Use viewport
+      threshold: 0.5, // Trigger when 20% of the section is in view
+      rootMargin: "-100px 0px 0px 0px", // Adjusts the top trigger point
+    }
+  );
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Select the sections to observe and the mini-nav element
+    const sections = document.querySelectorAll('.uxui-work');
+    const miniNav = document.querySelector('.mini-nav');
+  
+    if (sections && miniNav) {
+      // Set up IntersectionObserver
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              miniNav.classList.add('active'); // Show mini-nav
+            } else {
+              miniNav.classList.remove('active'); // Hide mini-nav
+            }
+          });
+        },
+        {
+          root: null, // Use the viewport as the root
+          threshold: 0.001, // Trigger when 10% of the section is visible
+        }
+      );
+  
+      // Observe each section
+      sections.forEach((section) => observer.observe(section));
+    } else {
+      console.error("Unable to find the specified sections or mini-nav in the DOM.");
+    }
+  });
+
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    
+    // Keep the preloader visible for 5 seconds
+    setTimeout(() => {
+        preloader.style.opacity = "0"; // Start the fade-out
+        preloader.style.pointerEvents = "none"; // Prevent interaction during the fade
+    }, 1000); // 5 seconds delay
+    
+    // Remove the preloader completely after the fade-out
+    setTimeout(() => {
+        preloader.style.display = "none";
+    }, 1200); // Additional 0.5s to match the fade-out duration
+});
+  
