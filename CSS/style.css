@@ -117,23 +117,9 @@ box-shadow: 0 0 10px rgba(0, 0, 0, .09);
     margin-left: 3rem;
     
 }
-.nav-item-2 {
-    margin-left: 3rem;
-    width: 100px;
-  
-}
 
 
-.nav-item-2 img {
-    width: 10px; /* Set a fixed size for the arrow */
-    height: auto;
-    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth rotation and glow transition */
-}
 
-.nav-item-2:hover img {
-    transform: rotate(44.5deg); /* Rotate arrow 90 degrees */
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1)); /* Add a subtle white glow */
-}
 
 .nav-link {
     font-size: 1rem;
@@ -142,8 +128,36 @@ box-shadow: 0 0 10px rgba(0, 0, 0, .09);
     font-family: "Inter", sans-serif;
     transition: all 0.3s ease-out;
     display: flex;
-    gap: 4px;
-}
+    align-items: center; /* Align text and arrow vertically */
+    gap: 3px; /* Reduce gap between text and arrow */
+  }
+
+  .nav-item {
+    margin-left: 3rem;
+    
+    }
+
+    .nav-item-2 {
+        margin-left: 3rem;
+        width: auto; /* Remove fixed width to prevent uneven spacing */
+      }
+    
+    
+    
+    .nav-item-2:hover img {
+        transform: rotate(44.5deg); /* Rotate arrow 90 degrees */
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1)); /* Add a subtle white glow */
+    }
+  
+  .nav-item-2 img {
+    width: 10px; /* Adjust arrow size as needed */
+    height: auto;
+    margin: 0; /* Remove any extra spacing */
+    padding: 0; /* Remove padding */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover effect */
+  }
+  
+
 
   
   .nav-link::before {
@@ -195,7 +209,7 @@ flex-direction: column;
 }
 .nav-text p{
     color: #a0a0a0;
-    text-align: left;
+    text-align: center;
     font-size: 11px;
 }
 
@@ -267,8 +281,8 @@ font-weight: 600;
 
 
 .banner{
-    height: 300px;
-    padding-top: 80px;
+    height: 700px;
+    padding-top: 150px;
     width: auto;
     
 }
@@ -276,11 +290,20 @@ font-weight: 600;
 
 
 .banner h4{
-text-align: center;
-font-size: 1.4rem;
-font-weight: 350;
-font-family: "Inter", sans-serif;
+    text-align: left;
+    font-size: 2.7rem;
+    font-weight: 200;
+    font-family: "Inter", sans-serif;
+    padding-left: 150px;
+    width: 90%;
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3);
 }
+
+.neonText-video{
+display: flex;
+justify-content: center;
+}
+
 .banner p{
 color: #ffffff;
 text-align: center;
@@ -306,6 +329,29 @@ padding-bottom: 20px;
     padding-top: 100px;
 }
 
+
+/* Preloader styles */
+/* Preloader styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* Background color for the preloader */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensures it appears above all other elements */
+    opacity: 1; /* Initially fully visible */
+    transition: opacity 0.5s ease; /* Smooth fade-out over 0.5 seconds */
+}
+
+/* Preloader video styles */
+.preloader-video {
+    width: 50px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
 
   /* ABOUT ME AND DETAILS------------> */
 
@@ -789,15 +835,20 @@ margin: 3rem;
 .back-home-btn, button{
    width: 180px; 
    height: 40px;
-   background-color: #fff;
+   background: rgba(82, 82, 82, 0.1);
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(13.7px);
+   -webkit-backdrop-filter: blur(13.7px);
+   border: 1px solid rgba(219, 219, 219, 0.32);
    margin: 20px 0px;
    transition: all 0.3s ease-out;
+   color: #fff;
    
    
 }
 
 .back-home-btn:hover{
-    background-color: #BCBCBC;
+    background-color: #4f4f4f91;
 }
 
 .what-is {
@@ -988,6 +1039,7 @@ object-fit: cover;
 .dssn-2 img{
 max-height: auto;
 width: 100%;
+
 }
 .dssn-2 video{
 max-height: auto;
@@ -1075,7 +1127,7 @@ padding: 0 122px;
 }
 
 .development-uxui img {
-    width: 100;
+    width: 90%;
     padding: 20px 0px;
 }
 
@@ -1083,6 +1135,50 @@ padding: 0 122px;
 display: flex;
 width: 100%;
 }
+
+.mini-nav {
+  position: fixed;
+  top: 20%;
+  right: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+.mini-nav.active {
+  opacity: 1;
+  visibility: visible;
+}
+  
+  .mini-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+  }
+  
+  .mini-nav ul li {
+    margin-bottom: 10px;
+    
+  }
+  
+  .mini-nav ul li a {
+    color: #989898;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 200;
+    transition: color 0.3s ease;
+  }
+  
+  .mini-nav ul li a:hover {
+    color: #fff; /* Highlight color on hover */
+  }
+
+  .mini-nav ul li a.active {
+    color: #fff;
+    text-decoration: underline;
+  }
 
 
 
@@ -1196,6 +1292,10 @@ footer p{
     }
     .bar{
         background-color: #000000;
+    }
+
+    .neonText-video video {
+        width: 70px !important; /* Resize video on mobile */
     }
     
 
@@ -1578,11 +1678,13 @@ body{
     font-family: "Poppins", sans-serif;
 }
 .banner h4{
-    text-align: center;
+    text-align: left !important;
     font-size: 1.2rem;
     font-weight: 300;
     font-family: "Inter", sans-serif;
     color: #ffffff;
+    width: 100%;
+    padding-left: 45px !important;
 }
 .banner p{
     color: #ffffff;
@@ -2066,6 +2168,10 @@ padding: 0 0px;
         display: block;
     }
 
+    .mini-nav {
+        display: none;
+      }
+
 
 
 iframe{
@@ -2543,12 +2649,7 @@ footer p{
         line-height: 90px;
         font-family: "Poppins", sans-serif;
     }
-    .banner h4{
-        text-align: center;
-        font-size: 1.2rem;
-        font-weight: 300;
-        font-family: "Inter", sans-serif;
-    }
+  
     .banner p{
         color: #ffffff;
         text-align: center;
@@ -2584,10 +2685,7 @@ footer p{
     }
     
 
-    .banner h4{
-        font-size: .90rem;
-       padding: 0 20px 0 20px;
-    }
+   
     .banner br{
        display: none;
     }
@@ -2641,7 +2739,7 @@ footer p{
    
     .banner{
         height: 250px;
-        padding-top: 170px;
+        padding-top: 150px;
         width: auto;
     }
     
@@ -2653,12 +2751,7 @@ footer p{
     line-height: 90px;
     font-family: "Poppins", sans-serif;
     }
-    .banner h4{
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 300;
-    font-family: "Inter", sans-serif;
-    }
+   
     .banner p{
     color: #ffffff;
     text-align: center;
@@ -2695,6 +2788,7 @@ footer p{
         font-size: .90rem;
        padding: 0 20px 0 20px;
     }
+
     .banner br{
        display: none;
     }
