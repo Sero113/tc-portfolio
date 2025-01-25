@@ -1307,7 +1307,7 @@ footer p{
         background-color: #000000;
     }
 
-    .neonText-video video {
+    .neonText-video img {
         width: 70px !important; /* Resize video on mobile */
     }
     
