@@ -166,4 +166,28 @@ document.querySelectorAll('.mini-nav a').forEach(anchor => {
         preloader.style.display = "none";
     }, 1200); // Additional 0.5s to match the fade-out duration
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const videoElement = document.getElementById("arrow-video");
+
+    // Check if the user is on a mobile device
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    // Set the video source based on the device
+    const videoSrc = isMobile 
+        ? "images/arrow-down-animation.mp4" // Mobile-friendly format
+        : "images/arrow-down-animation.webm"; // Desktop format
+
+    // Add the source to the video element
+    videoElement.src = videoSrc;
+
+    // Ensure autoplay works on mobile by muting and calling play
+    videoElement.muted = true;
+    videoElement.playsInline = true;
+
+    // Try to play the video
+    videoElement.play().catch((error) => {
+        console.error("Video autoplay failed:", error);
+    });
+});
   
