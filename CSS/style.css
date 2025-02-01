@@ -1122,6 +1122,12 @@ width: 100%;
     height: 250px;
     width: auto;
 }
+.what-is-uxui-2.bigger img{
+    margin: 32px 0;
+    height: auto;
+    width: auto;
+    margin-right: 50px;
+}
 
 .uxui-work{
 margin-top: 2rem;
@@ -1309,6 +1315,9 @@ footer p{
     }
 
     .neonText-video img {
+        width: 70px !important; /* Resize video on mobile */
+    }
+    .neonText-video video {
         width: 70px !important; /* Resize video on mobile */
     }
     
