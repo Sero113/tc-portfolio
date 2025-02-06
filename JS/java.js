@@ -184,4 +184,13 @@ document.addEventListener("DOMContentLoaded", () => {
         mobileGif.style.display = "none";
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".fade-in-element");
+  elements.forEach((element, index) => {
+    setTimeout(() => {
+      element.classList.add("visible");
+    }, index * 3000); // 3000ms = 3 seconds
+  });
+});
   
