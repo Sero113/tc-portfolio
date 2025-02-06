@@ -18,7 +18,7 @@
     }
 
     h2{
-        font-size: 2.488rem;
+        font-size: 2.88rem;
         line-height: 1.65;
         font-weight: 500;
         text-align: left;
@@ -76,11 +76,12 @@ a {
 }
 
 body{
-background-color: #111111;
+background-color: #050505;
+height: 100%;
 }
 
 .header{
-background-color: #050505;
+background-color: #000000;
 box-shadow: 0 0 10px rgba(0, 0, 0, .09);
 }
 
@@ -322,12 +323,39 @@ padding-bottom: 20px;
 }
 
 .mainwrapper{
-    
     height: auto;
     width: 100%;
     color: aliceblue;
     padding-top: 100px;
 }
+.mainwrapper-3{
+    min-height: 750px;
+    color: aliceblue;
+    padding-top: 100px;
+}
+
+.fade-in-element {
+    opacity: 0;
+    transition: opacity 3s ease-in;
+  }
+  
+  .fade-in-element.visible {
+    opacity: 1;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in-element {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+  }
 
 
 /* Preloader styles */
@@ -413,7 +441,7 @@ padding-bottom: 20px;
 
 .experience {
     padding: 1rem 1rem;
-    background-color: #111111; /* Matches the dark background */
+    background-color: #000000; /* Matches the dark background */
     color: #ffffff; /* Light text on dark background */
 }
 
@@ -1026,9 +1054,7 @@ height: auto;
     .dsn-4 { grid-area: 2 / 2 / 3 / 3; }
 
 .design img{
-    width: 100%;
-    
-   
+    width: 100%
 }
 
 .design-2{
@@ -1096,6 +1122,7 @@ width: 100%;
 .what-is-uxxi span{
     color: #ffffff;
     font-weight: bold;
+    
 }
 
 .what-is-uxui-1 h1{
@@ -1103,15 +1130,22 @@ width: 100%;
     padding: 10px 0 0 0px;
     margin-top: 1rem;
 }
+.what-is-uxui-1 h2 span{
+    text-align: left;
+    font-weight: 500;
+    font-size: 1.8rem;
+   
+    
+}
 .what-is-uxui-1 h6{
     text-align: left;
-    padding: 10px 0 0 0px;
-    margin-top: 1rem;
+    padding: 5px 0 0 0px;
+    
 }
 .what-is-uxui-1 p{
     width: 90%;
     color: #989898;
-    padding: 10px 0 0 0px;
+    padding: 1px 0 0 0px;
 }
 .what-is-uxui-2 {
     display: flex;
@@ -1237,14 +1271,19 @@ width: 100%;
 
 /* This is the footer section of the page  */
 
-footer{
-    background-color: #050505;
-    color: #ffffff;
-    padding: .625rem;
+
+
+footer {
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
-    height: 100%;
+    padding: .625rem;
+    background-color: black; /* Adjust as needed */
+    color: white;
     box-shadow: 10px 0 0px rgba(0,0,0,.09);
-}
+  }
 footer h6{
     font-size: .9rem !important;
     font-weight: 300;
@@ -2107,7 +2146,7 @@ width: 100%;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    padding: 0px 0px 0px 40px;
+    padding: 0px 40px 10px 40px;
     margin-top: 32px;
     }
     
@@ -2128,19 +2167,18 @@ width: 100%;
 }
 .what-is-uxui-1 h2{
     text-align: left;
-    padding: 10px 0 0 0px;
-    margin-top: 1rem;
+    padding: 0px 0 0 0px;
     color: #fff;
 }
 .what-is-uxui-1 h6{
     text-align: left;
-    padding: 10px 0 0 0px;
-    margin-top: 1rem;
+    padding: 5px 0 0 0px;
+    
 }
 .what-is-uxui-1 p{
-    width: 50%;
+    width: 100%;
     color: #989898;
-    padding: 10px 0 0 0px;
+    padding: 1px 0 0 0px;
 }
 .what-is-uxui-2 {
     display: flex;
@@ -2234,6 +2272,7 @@ padding-left: 40px;
 .what-is-2 img{
     height: auto;
     width: 100%;
+    margin-top: 20px;
     
 }
 
@@ -2329,24 +2368,28 @@ padding-left: 40px;
 }
 
 .design {
+    
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto(4, 1fr);
+    grid-column-gap: 0px;
     grid-row-gap: 10px;
-    padding: 0px;
-    margin: 40px;
+    padding: 0px 10px;
+    margin: 0px;
+    align-items: stretch;
 }
 
 
-    
     .dsn-1 { grid-area: 1 / 1 / 2 / 2; }
-    .dsn-2 { grid-area: 1 / 2 / 2 / 3; }
-    .dsn-3 { grid-area: 2 / 1 / 3 / 2; }
-    .dsn-4 { grid-area: 2 / 2 / 3 / 3; }
+    .dsn-2 { grid-area: 2 / 1 / 3 / 2; }
+    .dsn-3 { grid-area: 3 / 1 / 4 / 2; }
+    .dsn-4 { grid-area: 4 / 1 / 5 / 2; }
+    
 
 .design img{
+    height: auto;
     width: 100%;
+    padding: 0 !important;
     
    
 }
@@ -2355,30 +2398,34 @@ padding-left: 40px;
     gap: 0.625rem;
     justify-content: center;
     align-items: flex-start; /* Or stretch */
-    padding: 10px;
-    flex-wrap: wrap; /* Ensures wrapping on small screens */
+    padding: 10px 10px 0px 10px;
+    flex-wrap: wrap;
+     /* Ensures wrapping on small screens */
 }
 
 
 .design-2 img{
     width: 100%;
     height: auto;
+    padding-top: none !important;
 }
 
 
 .dssn-1 img{
     max-height: 700px;
     width: 100%;
-    padding: none;
-
+    padding-top: none !important;
+    
 }
 .dssn-2 img{
     max-height: 700px;
     width: 100%;
 }
 .dssn-2 video{
-    max-height: 700px;
     width: 100%;
+    max-height: 1290px;
+    height: auto;
+    object-fit: contain;
 }
 
 
@@ -2454,7 +2501,7 @@ padding-left: 40px;
     width: 100%;
     text-align: left !important;
     padding-left: 30px;
-    width: 60%;
+    width: 100%;
     color: #fff;
 }
 .challenge-solution-2 p {
@@ -2795,10 +2842,18 @@ footer p{
         color: aliceblue;
         padding-top: 100px;
     }
+
+    .mainwrapper-2{
+        padding: 40px 0px 0px 0px;
+        display: flex;
+        justify-content: center;
+    }
     
     .mainwrapper-2 img{
-    width: 100%;
-    height: auto;    
+        width: 100%;
+        max-height: 1290px;
+        height: auto;
+        object-fit: contain;   
     
     }
     
@@ -2818,15 +2873,7 @@ footer p{
     }
     
 
-.design {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    padding-top: 0px;
-    margin: 0px 10px;
-}
+
 
 
 
