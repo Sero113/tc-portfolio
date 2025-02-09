@@ -329,7 +329,8 @@ padding-bottom: 20px;
     padding-top: 100px;
 }
 .mainwrapper-3{
-    min-height: 750px;
+    
+    min-height: 900px;
     color: aliceblue;
     padding-top: 100px;
 }
@@ -860,7 +861,6 @@ height: auto;
   }
 
 
-
   /* THIS IS THE PORTOFLIO PAGES SECTION OF THE PAGE!!!!!!------->  */
 /* This is the Work Page Section for Branding */
 
@@ -874,7 +874,7 @@ margin: 3rem;
    justify-content: center; 
 }
 
-.back-home-btn, button{
+.back-home-btn{
    width: 180px; 
    height: 40px;
    background: rgba(82, 82, 82, 0.1);
@@ -2511,6 +2511,7 @@ padding-left: 40px;
     padding-left: 30px;
     width: 60%;
 }
+
 /* This is the footer section of the page  */
 
 footer{
