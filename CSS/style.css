@@ -401,7 +401,7 @@ padding-bottom: 20px;
 
 .what-is-about-1 h1{
     text-align: left;
-    padding: 150px 0 0 30px;
+    padding: 150px 0 0 70px;
 }
 .what-is-about-1 p{
     color: #989898;
@@ -409,12 +409,12 @@ padding-bottom: 20px;
 }
 .what-is-about-1 span{
     color: #ffffff;
-    padding-left: 30px;
+    padding-left: 70px;
 }
 .what-is-about-1 img{
     height: auto !important;
-    width: 120px !important;
-    padding-left: 30px;
+    width: 150px !important;
+    padding-left: 70px;
 }
 .what-is-about-2 img{
     height: auto;
@@ -424,7 +424,7 @@ padding-bottom: 20px;
 }
 
 .what-is-about-1 p{
-    padding: 10px 0 0 30px;
+    padding: 10px 0 0 70px !important;
 }
 
 #line{
@@ -441,7 +441,7 @@ padding-bottom: 20px;
 }
 
 .experience {
-    padding: 1rem 1rem;
+    padding: 1rem 2.5rem;
     background-color: #000000; /* Matches the dark background */
     color: #ffffff; /* Light text on dark background */
 }
@@ -458,7 +458,7 @@ padding-bottom: 20px;
     align-items: center; /* Vertically centers the items */
     gap: 10px; /* Adds space between the dot and the text */
     margin-bottom: 1.5rem; /* Space below the title */
-    padding-left: 50px;
+    padding-left: 70px;
 }
 
 .work-experience-title img {
