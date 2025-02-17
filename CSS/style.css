@@ -1476,7 +1476,7 @@ footer p{
     }
   
     
-    .what-is-about-1 p{
+    . p{
         padding: 10px 0 0 30px;
     }
 
@@ -1780,16 +1780,24 @@ body{
 
 .what-is-about-1 h1{
     text-align: left;
-    padding: 120px 0 0 70px;
+    padding: 120px 0 0 30px;
     color: #ffffff;
 }
 .what-is-about-1 p{
     color: #989898;
     width: 90%;
+    padding: 120px 0 0 30px;
 }
 .what-is-about-1 span{
     color: #ffffff !important;
     width: 90%;
+    padding: 0px 0 0 30px;
+}
+
+.what-is-about-1 img{
+    height: auto !important;
+    width: 110px !important;
+    padding-left: 30px;
 }
 .what-is-about-2 img{
     height: auto;
@@ -1801,7 +1809,7 @@ body{
 }
 
 .what-is-about-1 p{
-    padding: 10px 0 0 30px;
+    padding: 10px 0 0 30px !important;
 }
 
 
