@@ -1177,11 +1177,12 @@ padding: 0 122px;
     text-align: left;
     padding: 10px 0 0 0px;
     margin-top: 2rem;
-    width: 63%;
+    width: 58%;
+    color: #989898;
 }
 
 .development-uxui img {
-    width: 90%;
+    width: 70%;
     padding: 20px 0px;
 }
 
