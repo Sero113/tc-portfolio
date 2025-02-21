@@ -2249,6 +2249,10 @@ padding: 0 0px;
     color: #fff;
 }
 
+.uxui-prototype-link h4{
+padding-left: 0px !important;
+}
+
 .development-uxui img {
     width: 100%;
     padding: 20px 40px;
