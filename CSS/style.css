@@ -2234,6 +2234,20 @@ padding: 0 0px;
     width: 100%;
     color: #989898;
 }
+.uxui-work h4{
+    text-align: left;
+    padding: 5px 40px 0 40px;
+    margin-top: 1rem;
+    width: 100%;
+    color: #fff;
+}
+.uxui-work h6{
+    text-align: left;
+    padding: 5px 40px 0 40px;
+    margin-top: 1rem;
+    width: 100%;
+    color: #fff;
+}
 
 .development-uxui img {
     width: 100%;
