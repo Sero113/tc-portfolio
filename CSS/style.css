@@ -2280,6 +2280,15 @@ width: 100%;
     grid-row-gap: 0px;
     padding: 0px 40px 10px 40px;
     margin-top: 32px;
+}
+.what-is-uxui-design {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 0px 40px 10px 40px;
+    margin-top: 32px;
     }
     
     .what-is-1 { grid-area: 1 / 1 / 2 / 2; }
