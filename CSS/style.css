@@ -881,19 +881,17 @@ margin: 3rem;
 }
 
 .back-home-btn{
-   width: 180px; 
+   width: 130px; 
    height: 40px;
    
-   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   background: rgba(255, 255, 255, 0.1);
    backdrop-filter: blur(13.7px);
    -webkit-backdrop-filter: blur(13.7px);
    border: 1px solid rgba(219, 219, 219, 0.32);
    margin: 20px 0px;
    transition: all 0.3s ease-out;
-   color: #fff;
-    background: rgba(255, 255, 255, 0.2);
+   color: #c4c4c4;
     border-radius: 8px;
-    color: #fff;
     text-decoration: none;
     font-weight: 400;
     border: none;
@@ -1331,7 +1329,7 @@ width: 100%;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 200;
-    padding: 10px 15px;
+    padding: 10px 4px;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.1);
     transition: background 0.3s ease, color 0.3s ease;
