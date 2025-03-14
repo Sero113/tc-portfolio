@@ -839,6 +839,12 @@ height: auto;
     position: relative;
     z-index: 2;
   }
+
+  
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
   
 
   
@@ -877,7 +883,7 @@ margin: 3rem;
 .back-home-btn{
    width: 180px; 
    height: 40px;
-   background: rgba(82, 82, 82, 0.1);
+   
    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
    backdrop-filter: blur(13.7px);
    -webkit-backdrop-filter: blur(13.7px);
@@ -885,6 +891,14 @@ margin: 3rem;
    margin: 20px 0px;
    transition: all 0.3s ease-out;
    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
    
    
 }
@@ -968,7 +982,7 @@ height: auto;
     display: flex;
     justify-content: center;
     justify-content: space-around;
-    padding: 40px 0 0 70px
+    padding: 40px 190px;
 }
 .challenge-solution img {
     max-height: 800px;
@@ -988,14 +1002,14 @@ height: auto;
     width: 100%;
     text-align: left;
   
-    padding-left: 122px;
+    padding-left: 230px;
     width: 60%;
 }
 .challenge-solution-2 p {
     width: 100%;
     text-align: left;
     color: #989898;
-    padding-left: 122px;
+    padding-left: 230px;
     width: 60%;
 }
 
@@ -1015,7 +1029,7 @@ height: auto;
 
 .development img {
     width: 100;
-    padding: 20px 122px;
+    padding: 20px 200px;
 }
 
 
@@ -1044,7 +1058,7 @@ height: auto;
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    padding: 20px 122px;
+    padding: 20px 200px;
     margin: 0px;
 }
     
@@ -1061,7 +1075,7 @@ height: auto;
 display: flex;
 gap: .625rem;
 justify-content: center;
-padding: 20px 122px;
+padding: 20px 200px;
 }
 
 .design-2 img{
@@ -1112,7 +1126,16 @@ width: 100%;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    padding: 0 122px;
+    padding: 0px 150px 0px 350px;
+    margin-top: 32px;
+    }
+.what-is-uxui-design {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 0px 150px 0px 200px;
     margin-top: 32px;
     }
     
@@ -1165,7 +1188,7 @@ width: 100%;
 
 .uxui-work{
 margin-top: 2rem;
-padding: 0 122px;
+padding: 0px 170px 0px 350px;
 }
 
 .uxui-work h1{
@@ -1267,8 +1290,64 @@ width: 100%;
     text-decoration: underline;
 }
 
+.back-button {
+    position: fixed;
+    top: 20%;
+    left: 50px; /* Position it on the left */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 30px;
+    color: #989898;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 200;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .back-button.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .back-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
 
-
+  .project-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between elements */
+    margin-top: 50px;
+  }
+  
+  .nav-arrow {
+    color: #989898;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 200;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-arrow:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  
+  /* Ensuring Back to Work button fits the design */
+  
+  
+  .back-home-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
 
 /* This is the footer section of the page  */
 
@@ -1311,6 +1390,35 @@ footer p{
         box-shadow:
         0 10px 27px rgba(0, 0, 0, 0.05);
     }
+
+    .project-navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px; /* Space between elements */
+        margin-top: 50px;
+      }
+      
+      .nav-arrow {
+        color: #989898;
+        text-decoration: none;
+        font-size: 0.6rem;
+        font-weight: 200;
+        padding: 15px 6px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        transition: background 0.3s ease, color 0.3s ease;
+        margin: 0 10px 0 10px;
+      }
+      
+      .nav-arrow:hover {
+        background: rgba(255, 255, 255, 0.3);
+        color: #fff;
+      }
+
+    .back-button { 
+        display: none; /* Hides Back to Work button on mobile */
+      }
 
     .nav-menu.active {
         left: 0;
