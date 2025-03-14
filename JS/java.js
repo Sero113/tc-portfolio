@@ -193,4 +193,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }, index * 3000); // 3000ms = 3 seconds
   });
 });
+
+document.addEventListener("scroll", function () {
+  const backButton = document.querySelector(".back-button");
+  if (window.scrollY > 300) { // Adjust scroll threshold as needed
+    backButton.classList.add("active");
+  } else {
+    backButton.classList.remove("active");
+  }
+});
   
+
