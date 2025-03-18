@@ -1407,7 +1407,7 @@ footer p{
       .nav-arrow {
         color: #fff;
         text-decoration: none;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         font-weight: 200;
        
         margin: 0 10px 0 10px;
@@ -1442,7 +1442,7 @@ footer p{
          font-weight: 200;
          border: none;
          cursor: pointer;
-         font-size: 0.8rem;
+         font-size: 0.7rem;
          transition: background 0.3s ease;
         
         
