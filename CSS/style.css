@@ -875,35 +875,7 @@ width: 100%;
 margin: 3rem;
 }
 
-.back-home{
-   display: flex;
-   justify-content: center; 
-}
 
-.back-home-btn{
-   width: 130px; 
-   height: 40px;
-   
-   background: rgba(255, 255, 255, 0.1);
-   backdrop-filter: blur(13.7px);
-   -webkit-backdrop-filter: blur(13.7px);
-   border: 1px solid rgba(219, 219, 219, 0.32);
-   margin: 20px 0px;
-   transition: all 0.3s ease-out;
-   color: #c4c4c4;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 400;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
-   
-   
-}
-
-.back-home-btn:hover{
-    background-color: #4f4f4f91;
-}
 
 .what-is {
     display: grid;
@@ -1320,33 +1292,68 @@ width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Space between elements */
-    margin-top: 50px;
+    gap: 90px; /* Space between elements */
+    margin: 50px 0px 50px 0px;
+    
   }
   
   .nav-arrow {
-    color: #989898;
+    color: #fff;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 200;
-    padding: 10px 4px;
-    border-radius: 8px;
     background: rgba(255, 255, 255, 0.1);
-    transition: background 0.3s ease, color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 12px;
+    
+    
   }
   
   .nav-arrow:hover {
+    color: #ffffff;
+    transition: background 0.3s ease, color 0.3s ease;
     background: rgba(255, 255, 255, 0.3);
-    color: #fff;
   }
+
+  .back-home{
+   display: flex;
+   justify-content: center; 
+}
+
+.back-home { 
+    display: none; /* Hides Back to Work button Desktop */
+  }
+
+
+.back-home-btn{
+   width: 130px; 
+   height: 40px;
+   
+   background: rgba(255, 255, 255, 0.1);
+   backdrop-filter: blur(13.7px);
+   -webkit-backdrop-filter: blur(13.7px);
+   border: 1px solid rgba(219, 219, 219, 0.32);
+   margin: 20px 0px;
+   transition: all 0.3s ease-out;
+   color: #c4c4c4;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+   
+   
+}
+
+.back-home-btn:hover{
+    background-color: #4f4f4f91;
+}
   
   /* Ensuring Back to Work button fits the design */
   
   
-  .back-home-btn:hover {
-    background: rgba(255, 255, 255, 0.4);
-  }
-
+ 
 /* This is the footer section of the page  */
 
 
@@ -1393,30 +1400,58 @@ footer p{
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 0px; /* Space between elements */
+        gap: 5px; /* Space between elements */
         margin-top: 50px;
       }
       
       .nav-arrow {
-        color: #989898;
+        color: #fff;
         text-decoration: none;
-        font-size: 0.6rem;
+        font-size: 0.7rem;
         font-weight: 200;
-        padding: 15px 6px;
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.1);
-        transition: background 0.3s ease, color 0.3s ease;
+       
         margin: 0 10px 0 10px;
       }
       
       .nav-arrow:hover {
-        background: rgba(255, 255, 255, 0.3);
-        color: #fff;
+        color: #989898;
       }
 
     .back-button { 
         display: none; /* Hides Back to Work button on mobile */
       }
+   
+      .back-home{
+        display: flex;
+        justify-content: center; 
+     }
+     
+     .back-home-btn{
+        width: 130px; 
+        height: 36px;
+        
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(13.7px);
+        -webkit-backdrop-filter: blur(13.7px);
+        border: 1px solid rgba(219, 219, 219, 0.32);
+        margin: 20px 0px;
+        transition: all 0.3s ease-out;
+        color: #ffffff;
+         border-radius: 10px;
+         text-decoration: none;
+         font-weight: 200;
+         border: none;
+         cursor: pointer;
+         font-size: 0.8rem;
+         transition: background 0.3s ease;
+        
+        
+     }
+     
+     .back-home-btn:hover{
+         background-color: #4f4f4f91;
+     }
+       
 
     .nav-menu.active {
         left: 0;
