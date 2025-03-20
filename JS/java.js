@@ -204,3 +204,27 @@ document.addEventListener("scroll", function () {
 });
   
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const currentLocation = window.location.pathname.split("/").pop(); // Get current file name
+  const navLinks = document.querySelectorAll(".nav-link");
+  let isActive = false; // Flag to check if any link is active
+
+  navLinks.forEach(link => {
+      const linkPath = link.getAttribute("href").split("/").pop();
+      
+      if (currentLocation === linkPath) {
+          link.classList.add("active");
+          isActive = true;
+      } else {
+          link.classList.remove("active");
+      }
+  });
+
+  // If no link matches, remove all active states
+  if (!isActive) {
+      navLinks.forEach(link => link.classList.remove("active"));
+  }
+});
+
