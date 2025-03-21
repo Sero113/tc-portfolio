@@ -1109,7 +1109,7 @@ width: 100%;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    padding: 0px 150px 0px 350px;
+    padding: 50px 150px 0px 350px;
     margin-top: 32px;
     }
 .what-is-uxui-design {
@@ -1135,6 +1135,8 @@ width: 100%;
     text-align: left;
     padding: 10px 0 0 0px;
     margin-top: 1rem;
+    font-size: 3rem;
+    font-weight: 600;
 }
 .what-is-uxui-1 h2 span{
     text-align: left;
@@ -2457,6 +2459,7 @@ text-align: left;
 font-size: 3rem;
 font-weight: var(--font-medium);
 }
+
 
 .what-is-uxui-design {
     display: grid;
