@@ -117,7 +117,7 @@ document.querySelectorAll('.mini-nav a').forEach(anchor => {
     },
     {
       root: null, // Use viewport
-      threshold: 0.5, // Trigger when 20% of the section is in view
+      threshold: 0.2, // Trigger when 20% of the section is in view
       rootMargin: "-100px 0px 0px 0px", // Adjusts the top trigger point
     }
   );
@@ -141,7 +141,7 @@ document.querySelectorAll('.mini-nav a').forEach(anchor => {
         },
         {
           root: null, // Use the viewport as the root
-          threshold: 0.001, // Trigger when 10% of the section is visible
+          threshold: 0.0010, // Trigger when 10% of the section is visible
         }
       );
   
@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("scroll", function () {
   const backButton = document.querySelector(".back-button");
-  if (window.scrollY > 300) { // Adjust scroll threshold as needed
+  if (window.scrollY > 0) { // Adjust scroll threshold as needed
     backButton.classList.add("active");
   } else {
     backButton.classList.remove("active");
