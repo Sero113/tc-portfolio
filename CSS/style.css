@@ -375,6 +375,7 @@ font-family: var(--primary-font);
 .what-is-about-1 h1{
     text-align: left;
     padding: 150px 0 0 70px;
+    font-size: 3rem;
 }
 .what-is-about-1 p{
     color: #989898;
@@ -454,6 +455,7 @@ font-family: var(--primary-font);
 
 .company h2 {
     padding-left: 30px;
+    font-size: 2rem;
 }
 
 .details {
