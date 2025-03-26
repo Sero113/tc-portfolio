@@ -1183,12 +1183,13 @@ padding: 0px 170px 0px 350px;
     padding: 10px 0 0 0px;
     margin-top: 6rem;
     font-size: 3rem;
+    font-weight: var(--font-medium);
 }
 .uxui-work p{
     text-align: left;
     padding: 10px 0 0 0px;
     margin-top: 2rem;
-    width: 58%;
+    max-width: 620px;
     color: #d9d9d9;
 }
 
@@ -1200,6 +1201,87 @@ padding: 0px 170px 0px 350px;
 .uxui-prototype{
 display: flex;
 width: 100%;
+}
+
+.exc { text-align: center; 
+
+}
+       .exc h1 { margin: 0px 0px 0px 0px; color: #ffffff;
+            font-weight: var(--font-medium);
+            padding: 10px 0px 15px 0px;
+         }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        .section {
+            text-align: left;
+            
+            
+        }
+        .section h2 { margin-top: 0; color: #ffffff; font-size: 1.2rem;
+        font-weight: var(--font-medium);
+        }
+        .section p { color: #ffffff; 
+            margin: 0px 0px 0px 0px;
+            max-width: 300px;
+         }
+        .section-2 p { color: #ffffff; 
+            margin: 0px 0px 0px 0px;
+            max-width: 400px;
+        }
+        .section-2 span { 
+         font-weight: var(--font-semibold);
+        }
+
+
+
+ .divider{
+display: flex;
+gap: 20px;
+}
+ .divider-1 h1 {
+font-size: 2rem;
+}
+ .divider-1 p {
+    padding: 0;
+    margin: 0;
+}
+ .divider-2 img{
+
+}
+
+#research span { 
+    font-weight: var(--font-semibold);
+}
+.ending span { 
+    font-weight: var(--font-semibold);
+}
+.section span { 
+    font-weight: var(--font-semibold);
+}
+
+.vid-protype{
+display: flex;
+justify-content: left;
+align-items: center;
+gap: 60px;
+}
+.vid-pro video{
+width: auto;
+max-height: 500px;
+}
+#prototype h1{
+padding: 0px 0px 60px 0px;
+}
+
+.vid-pro-text h2{
+    font-size: 2rem;
+}
+.vid-pro-text p{
+    max-width: 400px;
+    margin: 0;
 }
 
 .mini-nav {
@@ -1803,7 +1885,53 @@ footer {
         color: #000 !important;
     }
 
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
     
+    .section h2 { margin-top: 0; color: #ffffff; font-size: 1.2rem;
+        font-weight: var(--font-medium);
+        padding: 0 40px;
+    }
+    .section span { 
+        color: #fff;
+    }
+    .section-2 span { 
+        color: #fff;
+    }
+    #research span { 
+        color: #fff;
+    }
+
+    .vid-protype{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 0px;
+        padding: 20px 10px;
+        }
+        .vid-pro video{
+        width: auto;
+        max-height: 600px;
+        }
+        #prototype h1{
+        padding: 0px 40px;
+        }
+        
+        .vid-pro-text h2{
+            font-size: 1rem;
+            padding: 0px 40px;
+        }
+        .vid-pro-text p{
+            max-width: 550px;
+            line-height: 20px;
+            padding: 0px 40px 0px 40px !important;
+            margin-top: 3px !important;
+        }
+
 * {
     margin: 0;
     padding: 0;
@@ -2527,6 +2655,20 @@ padding: 0 0px;
     width: 100%;
     color: #989898;
 }
+.uxui-work h3{
+    text-align: left;
+    padding: 15px 40px 0 40px;
+    margin-top: 1rem;
+    width: 100%;
+    color: #fff;
+}
+.uxui-work h4{
+    text-align: left;
+    padding: 5px 40px 0 40px;
+    margin-top: 1rem;
+    width: 100%;
+    color: #fff;
+}
 .uxui-work h4{
     text-align: left;
     padding: 5px 40px 0 40px;
@@ -2569,10 +2711,12 @@ padding-left: 0px !important;
       }
 
 
+    
 
 iframe{
 padding-left: 40px;
 }
+
 
 
 
