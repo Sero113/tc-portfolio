@@ -1267,6 +1267,7 @@ display: flex;
 justify-content: left;
 align-items: center;
 gap: 60px;
+padding-left: 100px;
 }
 .vid-pro video{
 width: auto;
@@ -1329,7 +1330,7 @@ padding: 0px 0px 60px 0px;
   }
 
   .highlight{
-    font-weight: var(--font-semibold);
+    font-weight: var(--font-medium);
     font-family: var(--primary-font);
 }
 
