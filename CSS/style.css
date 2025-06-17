@@ -1640,8 +1640,8 @@ footer {
         0 10px 27px rgba(0, 0, 0, 0.05);
     }
 
-     .homevid video{
-      max-width: 440px;
+     .homevid img{
+      max-width: 430px;
       height: 670px;
       object-fit: fill;
         }
