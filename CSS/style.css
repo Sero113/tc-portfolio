@@ -1641,8 +1641,8 @@ footer {
     }
 
      .homevid video{
-      width: 440px; 
-      height: 770px;
+      min-width: 440px; 
+      max-height: 670px;
       object-fit: fill;
         }
 
@@ -3218,8 +3218,8 @@ footer p{
             text-align: left;
             font-weight: 500;
             font-size: 2rem;
-            padding-top: 120px;
-            line-height: 90px;
+            padding-top: 100px;
+            line-height: 120px;
             font-family: var(--primary-font);
             padding-left: 45px;
         }
