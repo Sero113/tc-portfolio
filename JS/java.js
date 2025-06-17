@@ -229,18 +229,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const videos = document.querySelectorAll(".autoplay-video");
+  const desktopVideo = document.getElementById("desktop-video");
+  const mobileGif = document.getElementById("mobile-gif");
 
-  videos.forEach((video) => {
-    video.muted = true; // Required for mobile autoplay
-    video.playsInline = true; // Prevent full-screen on iOS
-    video.autoplay = true;
-    video.loop = true;
+  // Detect mobile device
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    // Try to play the video manually
-    video.play().catch((err) => {
-      console.warn("Autoplay failed, user interaction may be required:", err);
+  if (isMobile) {
+    // Show GIF, hide video
+    desktopVideo.style.display = "none";
+    mobileGif.style.display = "block";
+  } else {
+    // Show video, hide GIF
+    desktopVideo.style.display = "block";
+    mobileGif.style.display = "none";
+
+    // Ensure autoplay on desktop
+    desktopVideo.muted = true;
+    desktopVideo.play().catch((error) => {
+      console.warn("Autoplay might be blocked:", error);
     });
-  });
+  }
 });
-
