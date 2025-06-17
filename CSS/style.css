@@ -713,6 +713,7 @@ header{
     justify-content: center;
     font-size: 2rem;
     text-align: center;
+    font-weight: 500;
 }
 
 .mainwrapper-2{
@@ -1523,6 +1524,16 @@ font-weight: var(--font-book);
     display: none; /* Hides Back to Work button Desktop */
   }
 
+  .homevid video{
+position: absolute;
+z-index: -20;
+top: 0;
+left: 0;
+width: auto;
+ max-height: 800px;
+}
+
+
 
 .back-home-btn{
    width: 130px; 
@@ -1564,6 +1575,7 @@ footer {
     padding: 20px;
     font-size: 14px;
     text-align: left;
+    padding-top: 50px;
 }
 .footer-content {
     width: auto;
@@ -1627,6 +1639,16 @@ footer {
         box-shadow:
         0 10px 27px rgba(0, 0, 0, 0.05);
     }
+
+     .homevid video{
+        position: absolute;
+        z-index: -20;
+        top: 0;
+        left: 0;
+        width: auto;
+        max-height: 650px;
+}
+
 
     .project-navigation {
         display: flex;
@@ -3000,6 +3022,7 @@ footer{
     text-align: center;
     height: 100%;
     box-shadow: 10px 0 0px rgba(0,0,0,.09);
+    padding-top: 200px;
 }
 footer h6{
     font-size: .9rem !important;
@@ -3185,15 +3208,15 @@ footer p{
    
   
     
-    .banner h3{
-        text-align: left;
-        font-weight: 500;
-        font-size: 1rem;
-        padding-top: 30px;
-        line-height:40px;
-        font-family: var(--primary-font);
-        padding-left: 45px;
-    }
+    .banner h3 {
+            text-align: left;
+            font-weight: 500;
+            font-size: 2rem;
+            padding-top: 120px;
+            line-height: 90px;
+            font-family: var(--primary-font);
+            padding-left: 45px;
+        }
   
     .banner p{
         color: #ffffff;
@@ -3238,7 +3261,7 @@ footer p{
        display: none;
     }
     .neonText span{
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     
@@ -3334,7 +3357,7 @@ footer p{
     
 
     .banner h4{
-        font-size: .90rem;
+        font-size: 1.5rem;
        padding: 0 20px 0 20px;
     }
 
