@@ -1641,8 +1641,8 @@ footer {
     }
 
      .homevid video{
-      min-width: 440px; 
-      max-height: 670px;
+      max-width: 440px;
+      height: 670px;
       object-fit: fill;
         }
 
