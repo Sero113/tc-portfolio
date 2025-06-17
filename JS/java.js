@@ -228,3 +228,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const videos = document.querySelectorAll(".autoplay-video");
+
+  videos.forEach((video) => {
+    video.muted = true; // Required for mobile autoplay
+    video.playsInline = true; // Prevent full-screen on iOS
+    video.autoplay = true;
+    video.loop = true;
+
+    // Try to play the video manually
+    video.play().catch((err) => {
+      console.warn("Autoplay failed, user interaction may be required:", err);
+    });
+  });
+});
+
