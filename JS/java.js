@@ -228,4 +228,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector("video");
 
+  if (video) {
+    video.muted = true;
+    video.playsInline = true;
+    video.autoplay = true;
+    video.loop = true;
+
+    // Fallback attempt to play
+    video.play().catch((err) => {
+      console.warn("Autoplay failed:", err);
+    });
+  }
+});
