@@ -1641,13 +1641,19 @@ footer {
     }
 
      .homevid video{
+      width: 440px; 
+      height: 770px;
+      object-fit: fill;
+        }
+
+    .homevid {
         position: absolute;
         z-index: -20;
         top: 0;
         left: 0;
-        width: auto;
-        max-height: 650px;
-}
+        
+        
+    }
 
 
     .project-navigation {
