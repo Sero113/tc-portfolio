@@ -180,3 +180,10 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.forEach(link => link.classList.remove("active"));
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const videos = document.querySelectorAll(".homevid");
+  videos.forEach(video => {
+    video.play().catch(err => console.error("Autoplay failed:", err));
+  });
+});
