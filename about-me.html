@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="/tc-logo-black-favicon.png">
-    <title>Taylor Camacho's Portfolio</title>
+    <title>Taylor's Portfolio</title>
 </head>
 <body>
-    <!-- This is The Navigation Section -->
+      <!-- Preloader -->
+      <div id="preloader">
+        <video class="preloader-video"  autoplay muted playsinline loop>
+            <source src="/images/chrome-tc-logo copy.mp4" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     <header class="header">
         <nav class="navbar">
             <a href="index.html" class="nav-logo">
@@ -23,7 +30,7 @@
             </a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link nav-link-ltr">Home</a>
+                    <a href="index.html" class="nav-link nav-link-ltr active">Home</a>
                 </li>
                 <li class="nav-item">
                     <a href="projects.html" class="nav-link nav-link-ltr">Work</a>
@@ -36,6 +43,8 @@
                 </li>
 
             </ul>
+
+            
             <button class="hamburger" aria-label="Hamburger-Menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -44,139 +53,50 @@
         </nav>
 </header>
 
-    <section class="mainwrapper-2">
-        <div class="ascentix-wrapper">
-            <div class="what-is-about-me fade-in" >
-                <div class="what-is-about-1">
-                        <h1>Hi, I'm Taylor Camacho</h1>
-                    <div class="about-body">
-                             <p><span>A Graphic Designer, with expertise in Adobe Creative Suite & Figma. </span>  I love adding my own personal flare to my projects.
-                    My passions lie in fashion, the outdoors, and tech. I enjoy combining these elements which can be seen in my work.
-                <br>
-                <br>   
-            
-                I have been <span>experimenting with AI in my recent projects</span>  and have a <span>strong foundation in HTML, CSS, and JavaScript which I used to build this portfolio from scratch to reflect both my design and technical skills.</span> 
-                <br>
-                <br>
-                    I'm always open to new opportunities. If you'd like to connect, feel free to reach out to me through email or Linkedin.
-                <br>
-                <br>
-                </p>
-                    </div>
-               
-                <div class="connects">
-                    <span><a href="mailto:taylorcamacho39@gmail.com">taylorcamacho39@gmail.com</a></span>
-                    <span class="connect"><a href="https://drive.google.com/file/d/1uZWn0_Q8jK_vKQWdTIGhp0RCvrYe9y2d/view?usp=sharing" target="_blank">Resume</a></span> 
-                    <span class="connect"><a href="https://www.linkedin.com/in/taylor-camacho-2659a51b1/" target="_blank">Linkedin</a></span> 
-                </div>
-                
-                    <br>
-                    <img src="/images/about-Me/tc-signature.webp" alt="Signature">
-                </div>
-            <div class="what-is-about-2 fade-in">
-                    <img src="/images/about-Me/Tay.webp" alt="professional Potrait shot">
-            </div>
-        </div>
-        <section id="line">
-            <div class="separator"></div> 
-        </section>
-        <div class="work-experience-title">
-            <img src="/images/about-Me/dot.svg" alt="glowing dot">
-            <p class="experience-title">Experience</p> <!-- Title with glow -->
-        </div>
-        <section class="experience">
-            <div class="experience-item">
-                <div class="company">
-                    <h2>Securian Canada</h2>
-                </div>
-                <div class="details">
-                    <p class="position">Graphic Designer</p>
-                    <p class="dates">08/25 - Present</p>
-                    <p class="description">
-                        Contributed to the design of <span>print and digital assets for a CFL "Diversity in Football" event,
-                        leading to an 80% increase in approval ratings.</span> Worked with various print materials, including posters and banners,
-                        and <span>handled documentation using Microsoft Office and InDesign.</span> Created engaging <span>video content with Premiere Pro, Adobe Express,
-                        and other Adobe Creative Suite tools.</span>
-                    </p>
-                </div>
-            </div>
-            <div class="experience-item">
-                <div class="company">
-                    <h2>Charrette</h2>
-                </div>
-                <div class="details">
-                    <p class="position">Graphic Designer</p>
-                    <p class="dates">09/24 - 01/25</p>
-                    <p class="description">
-                        Collaborated with clients to design <span>logos, style guides, and brand visuals that strengthened audience connection by 15% </span>  and
-                        <span>designed cohesive print and digital assets</span>  that supported successful campaigns and maintained brand consistency.
-                    </p>
-                </div>
-            </div>
-            <div class="experience-item">
-                <div class="company">
-                    <h2>Humber Polytechnic</h2>
-                </div>
-                <div class="details">
-                    <p class="position">Graphic Design Tutor</p>
-                    <p class="dates">09/24 - 05/25</p>
-                    <p class="description">
-                        Selected by a peer for <span>one-on-one tutoring support</span> during the program, based on strong performance and <span>collaborative skills.</span> 
-                        <br>
-                        <br>
-                        Provided constructive feedback on assignments and <span>guided peers through portfolio-building strategies.</span> 
-                    </p>
-                </div>
-            </div>
-            <div class="experience-item">
-                <div class="company">
-                    <h2>Platinum Quick</h2>
-                </div>
-                <div class="details">
-                    <p class="position">Graphic Designer</p>
-                    <p class="dates">05/22 - 08/23 </p>
-                    <p class="description">
-                        Designed a wide range of <span>digital and print assets including social media graphics, promotional materials, signage, and packaging </span>  to support client marketing strategies.
-                        <br>
-                        <br>
-                        Delivered creative solutions under tight deadlines, <span>balancing multiple projects</span> while maintaining a high standard of design and <span>attention to detail.</span>
-                    </p>
-                </div>
-            </div>
-            <section id="line">
-            <div class="separator"></div> 
-            </section>
-            <section class="brands-wrapper">
-        <h2 class="text-center">Brands Worked With</h2>
+<section class="banner text-focus-in">
+  <div class="homevid-cover">
+    <video class="homevid autoplay-video" autoplay muted playsinline loop preload="auto" src="/images/Smooth-gradiant-2025-60.mp4"></video>
 
 
-    <div class="brands-logos">
-        <img src="/images/about-Me/CAA-Icon.png" alt="CFL Logo" class="h-16 w-auto object-contain">
-        <img src="/images/about-Me/Adobe-icon.png" alt="CAA Logo" class="h-16 w-auto object-contain">
-        <img src="/images/about-Me/CFL-iocn.png" alt="Adobe Logo" class="h-16 w-auto object-contain">
+    <div class="neonText">
+      <h3>Hi I'm Taylor Camacho</h3>
+      <h4>
+        A Toronto-based  
+        <span class="highlight">Graphic Designer</span>.
+        <br>
+        I specialize in clear visual design and user-friendly digital experiences.
+      </h4>
+      <a href="projects.html" class="view-work-button">View Work</a>
+
     </div>
+  </div>
+  
+  
 </section>
-        </section>
+
+
+
+
+<footer>
+
+<footer>
+    <div class="footer-content">
+        <div class="contact-info">
+          <p>Contact: <a href="mailto:taylorcamacho39@gmail.com">taylorcamacho39@gmail.com</a></p>
+          <p>Location: Toronto, Canada</p>
         </div>
-    </section>
-    <footer>
-        <div class="footer-content">
-            <div class="contact-info">
-              <p>Contact: <a href="mailto:taylorcamacho39@gmail.com">taylorcamacho39@gmail.com</a></p>
-              <p>Location: Toronto, Canada</p>
-            </div>
-            <hr>
-            <div class="footer-bottom">
-              <p>© 2025 Taylor Camacho | Built and Developed by me in Vs code 👨🏽‍💻 </p>
-              <div class="social-links">
-                
-                <a href="https://www.linkedin.com/in/taylor-camacho-2659a51b1/">LinkedIn</a> - 
-                <a href="https://github.com/Sero113">Github</a> - 
-              </div>
-            </div>
+        <hr>
+        <div class="footer-bottom">
+          <p>© 2025 Taylor Camacho | Built and Developed by me in Vs code 👨🏽‍💻 </p>
+          <div class="social-links">
+            
+            <a href="https://www.linkedin.com/in/taylor-camacho-2659a51b1/">LinkedIn</a> - 
+            <a href="https://github.com/Sero113">Github</a> - 
           </div>
-        </footer>
-    
+        </div>
+      </div>
+    </footer>
+
 </body>
-<script src="/js/java.js"></script>
+<script src="/JS/java.js"></script>
 </html>
