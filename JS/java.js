@@ -135,11 +135,11 @@ window.addEventListener("load", function () {
   setTimeout(() => {
     preloader.style.opacity = "0";
     preloader.style.pointerEvents = "none";
-  }, 1000);
+  }, 2000);
 
   setTimeout(() => {
     preloader.style.display = "none";
-  }, 1200);
+  }, 2200);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -187,3 +187,26 @@ document.addEventListener("DOMContentLoaded", () => {
     video.play().catch(err => console.error("Autoplay failed:", err));
   });
 });
+
+// Contact Modal Functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtn = document.getElementById("openModal");
+  const modal = document.querySelector(".contact-modal");
+  const closeBtn = document.querySelector(".close-modal");
+
+  openBtn.addEventListener("click", () => {
+    modal.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+
+  modal.addEventListener("click", (e) => {
+    // Close when clicking outside modal content
+    if (e.target === modal) {
+      modal.classList.remove("active");
+    }
+  });
+});
+
