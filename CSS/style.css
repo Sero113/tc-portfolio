@@ -372,7 +372,7 @@ font-family: var(--primary-font);
 
 /* Preloader video styles */
 .preloader-video {
-    width: 50px; /* Adjust width as needed */
+    width: 120px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
 }
 
@@ -399,12 +399,17 @@ font-family: var(--primary-font);
     font-size: 3rem;
 }
 .what-is-about-1 p{
-    color: #989898;
+    color: #c7c7c7;
     width: 90%;
+    font-weight: var(--font-medium);
 }
-.what-is-about-1 span{
+.connects span{
     color: #ffffff;
     padding-left: 70px;
+}
+.about-body span{
+    color: #ffffff;
+    
 }
 .what-is-about-1 img{
     height: auto !important;
@@ -502,7 +507,28 @@ font-family: var(--primary-font);
     font-size: 0.95rem;
     line-height: 1.5;
     color: #989898; /* Improve readability */
+    font-weight: var(--font-medium);
 }
+.details .description span {
+    color: #fff;
+}
+
+.brands-logos{
+display: flex;
+justify-content: space-around;
+}
+
+.brands-logos img {
+max-width: 17%;
+opacity: 80%;
+}
+
+.text-center{
+font-size: h1;
+font-weight: var(--primary-font);
+}
+
+
 
 
 
@@ -1006,13 +1032,19 @@ height: auto;
     width: 100%;
     text-align: left;
     color: #989898;
+    font-weight: var(--font-medium);
 }
 .challenge-solution-2 h1 {
     width: 100%;
     text-align: left;
-  
     padding-left: 230px;
     width: 60%;
+}
+.challenge-solution h2 {
+        font-size: 1.44rem;
+        text-align: left;
+        color: #ffffff !important;
+        font-weight: var(--font-bold);
 }
 .challenge-solution-2 p {
     width: 100%;
@@ -1020,6 +1052,7 @@ height: auto;
     color: #989898;
     padding-left: 230px;
     width: 60%;
+    font-weight: var(--font-medium);
 }
 
 .brand-wrapper h4{
@@ -1178,6 +1211,10 @@ width: 100%;
     width: 90%;
     color: #989898;
     padding: 1px 0 0 0px;
+    font-weight: var(--font-medium);
+}
+.what-is-uxui-1 p span{
+    color: #fff;
 }
 .what-is-uxui-2 {
     display: flex;
@@ -1352,7 +1389,7 @@ padding: 0px 0px 60px 0px;
   }
 
   .highlight{
-    font-weight: var(--font-medium);
+    font-weight: var(--font-bold);
     font-family: var(--primary-font);
 }
 
@@ -1584,7 +1621,7 @@ font-weight: var(--font-book);
 .neonText h4 {
   text-align: left;
   font-size: 2.8rem;
-  font-weight: 200;
+  font-weight: 400;
   text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3);
 }
 
@@ -1621,6 +1658,159 @@ font-weight: var(--font-book);
  
 /* This is the footer section of the page  */
 
+/* Floating Contact Button (centered bottom) */
+.contact-btn {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1b1b1b;
+  color: #a1144a;
+  font-weight: bold;
+  padding: 0.3rem 2rem 0.2rem 0.5rem;
+  border-radius: 999px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+  cursor: pointer;
+}
+.contact-btn img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.contact-btn-text h3{
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+/* Modal Styling */
+.contact-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+}
+.contact-modal.active {
+  display: flex;
+}
+.modal-content {
+  background: #dbdbdb;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 95%;
+  max-width: 1400px;
+  height: 700px;
+  position: relative;
+  animation: slideUp 0.4s ease forwards;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 2rem;
+  background-color: rgb(169, 169, 169);
+  border-radius: 50%;
+  padding: 5px 15px;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+}
+.modal-content h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 75px;
+  color: #161616;
+  font-family: var(--primary-font)
+}
+.modal-content .highlight {
+  color: #282828;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.form-box {
+  display: flex;
+  flex-direction: column;
+}
+.form-box label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #282828;
+  font-family: var(--primary-font);
+}
+.form-box input,
+.form-box textarea {
+  padding: 12px 0px 80px 12px;
+  border: none;
+  border-radius: 12px;
+  background-color: #f6f6f6;
+  font-size: 1rem;
+  resize: none;
+}
+
+.form-box-details{
+display: flex;
+}
+
+textarea {
+  height: 100px;
+}
+.tag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tag {
+  background: #fff;
+  border: 2px solid #a1144a;
+  color: #a1144a;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.tag:hover {
+  background-color: #a1144a;
+  color: white;
+}
+.submit-btn {
+  margin-top: 2rem;
+  background: #a1144a;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
 
 
 footer {
@@ -1629,7 +1819,7 @@ footer {
     padding: 20px;
     font-size: 14px;
     text-align: left;
-    margin-top: 100px;
+    margin-top: 120px;
 }
 .footer-content {
     width: auto;
@@ -1890,6 +2080,7 @@ footer {
         font-size: 1.44rem;
         text-align: left;
         color: #ffffff !important;
+        font-weight: var(--font-bold);
     }
 
   
@@ -1960,6 +2151,25 @@ footer {
         max-width: 100%;
         padding-left: 0px; /* Use full width on smaller screens */
     }
+
+    .brands-logos{
+display: flex;
+justify-content: center;
+text-align: center;
+flex-direction: column;
+padding: 0 60px 0 60px;
+}
+
+
+.brands-logos img {
+max-width: 100%;
+opacity: 80%;
+}
+
+.text-center{
+font-size: 40px;
+font-weight: var(--primary-font);
+}
 
    
 
@@ -2231,7 +2441,7 @@ footer {
     font-size: 3rem;
 }
 .what-is-about-1 p{
-    color: #989898;
+    color: #c7c7c7;
     width: 90%;
     padding: 0px 0 0 30px !important;
 }
