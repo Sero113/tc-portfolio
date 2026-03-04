@@ -71,19 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
     video.autoplay = true;
     video.loop = true;
     video.playsInline = true;
-    video.controls = false;
-    video.preload = "auto";
     video.setAttribute("muted", "");
     video.setAttribute("autoplay", "");
     video.setAttribute("loop", "");
     video.setAttribute("playsinline", "");
     video.setAttribute("webkit-playsinline", "");
-    video.setAttribute("x5-playsinline", "");
-    video.setAttribute("x5-video-player-type", "h5");
-    video.setAttribute("x5-video-player-fullscreen", "false");
-    video.setAttribute("disablepictureinpicture", "");
-    video.setAttribute("controlslist", "nodownload noplaybackrate noremoteplayback");
-    video.removeAttribute("controls");
 
     const playPromise = video.play();
     if (playPromise && typeof playPromise.catch === "function") {
@@ -99,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const kickstartPlayback = () => videos.forEach((video) => tryPlay(video));
   window.addEventListener("pageshow", kickstartPlayback);
-  window.addEventListener("load", kickstartPlayback);
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible") {
       kickstartPlayback();
@@ -107,12 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   document.addEventListener("touchstart", kickstartPlayback, { once: true, passive: true });
   document.addEventListener("click", kickstartPlayback, { once: true });
-  document.addEventListener("scroll", kickstartPlayback, { once: true, passive: true });
-
-  // Some in-app browsers delay media startup; short retries improve consistency.
-  [80, 220, 450, 900].forEach((delay) => {
-    setTimeout(kickstartPlayback, delay);
-  });
 });
 
 // Smooth scrolling for anchor links
@@ -198,25 +183,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("load", function () {
   const preloader = document.getElementById("preloader");
-  if (!preloader) return;
-  const homeVideo = document.querySelector(".homevid");
 
-  const hidePreloader = () => {
+  setTimeout(() => {
     preloader.style.opacity = "0";
     preloader.style.pointerEvents = "none";
-    setTimeout(() => {
-      preloader.style.display = "none";
-    }, 300);
-  };
+  }, 2000);
 
-  // Hide as soon as hero video starts/resolves, fallback to short timeout.
-  if (homeVideo) {
-    const onReady = () => hidePreloader();
-    homeVideo.addEventListener("playing", onReady, { once: true });
-    homeVideo.addEventListener("canplay", onReady, { once: true });
-  }
-
-  setTimeout(hidePreloader, 1200);
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 2200);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
