@@ -29,7 +29,7 @@
                     <a href="projects.html" class="nav-link nav-link-ltr">Work</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about-me.html" class="nav-link nav-link-ltr">About</a>
+                    <a href="about-me.html" class="nav-link nav-link-ltr">Info</a>
                 </li>
                 <li class="nav-item">
                     <a href="contact.html" class="nav-link nav-link-ltr-1">Contact</a>
@@ -44,68 +44,68 @@
         </nav>
 </header>
 
+<section class="contact-page fade-in">
+    <div class="contact-cta">
+        <h1>Have a project in mind or want to talk?</h1>
+        <p>For commissions and project inquiries, send a message below or email me directly.</p>
+    </div>
 
-<div class="contact-text fade-in">
-    <h1>Have a Project in Mind?
-        <br>
-        Let’s Make It Happen
-    </h1>
-</div>
+    <div class="contact-layout">
+        <aside class="contact-side">
+            <p class="contact-side-label">Direct Contact</p>
+            <a class="contact-side-email" href="mailto:hello@taylorcamacho.com">hello@taylorcamacho.com</a>
+            <p class="contact-side-note">Toronto, Canada</p>
+        </aside>
 
-    <section class="mainwrapper-2 fade-in">
-       <!-- Contact Section -->
+        <div class="contact-form-card">
+            <h2>Send a message</h2>
+            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="contact-form-modern">
+                <input type="hidden" name="access_key" value="9239a267-365d-4e4d-b724-c74b11a16d9c">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-       
-            <div class="container">
-                
-                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-                    <input type="hidden" name="access_key" value="9239a267-365d-4e4d-b724-c74b11a16d9c">
-                   <div class="form-row">
-                      <div class="input-data">
-                        <input type="text" id="name" name="name" required>
-                         <div class="underline"></div>
-                         <label for="name">Name*</label>
-                      </div>
-                   </div>
-                   <div class="form-row">
-                      <div class="input-data">
-                         <input type="email" name="email" required>
-                         <div class="underline"></div>
-                         <label for="email">Email*</label>
-                      </div>
-                   </div>
-                   <div class="form-row">
-                   <div class="input-data textarea">
-                      <textarea name="message" required></textarea>
-                      <br />
-                      <div class="underline"></div>
-                      <label for="">Message*</label>
-                      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                      <br />
-                      <div class="form-row submit-btn">
-                         <div class="input-data">
-                            <div class="inner"></div>
-                            <input type="submit" value="submit">
-                         </div>
-                      </div>
-                </form>
+                <div class="contact-form-grid">
+                    <div class="form-field">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" required>
+                    </div>
                 </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="message">Write a message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="view-work-button contact-submit">Send Message</button>
+            </form>
+
+            <div class="contact-socials">
+                <p>Or connect on socials:</p>
+                <a href="https://www.linkedin.com/in/taylor-camacho-2659a51b1/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <span>·</span>
+                <a href="https://github.com/Sero113" target="_blank" rel="noopener noreferrer">Github</a>
             </div>
-            
-    </section>
+        </div>
+    </div>
+</section>
     <div class="space-breaker">
                 
     </div>
-    <footer>
+    <footer class="contact-footer">
     <div class="footer-content">
         <div class="contact-info">
-          <p>Contact: <a href="mailto:taylorcamacho39@gmail.com">taylorcamacho39@gmail.com</a></p>
+          <p>Contact: <a href="mailto:hello@taylorcamacho.com">hello@taylorcamacho.com</a></p>
           <p>Location: Toronto, Canada</p>
         </div>
         <hr>
-        <section id="line">
-            <div class="separator"></div> 
-        </section>
         <div class="footer-bottom">
           <p>© 2025 Taylor Camacho | Built and Developed by me in Vs code 👨🏽‍💻 </p>
           <div class="social-links">
@@ -119,5 +119,3 @@
 </body>
 <script src="/js/java.js"></script>
 </html>
-
-
