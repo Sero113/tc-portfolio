@@ -1,7 +1,9 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
-hamburger.addEventListener("click", mobileMenu);
+if (hamburger && navMenu) {
+  hamburger.addEventListener("click", mobileMenu);
+}
 
 function mobileMenu() {
   hamburger.classList.toggle("active");
@@ -34,18 +36,40 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const videos = document.querySelectorAll(".autoplay-video");
-
-  videos.forEach((video) => {
+  const videos = document.querySelectorAll("video[autoplay], .autoplay-video, .homevid, .preloader-video");
+  const tryPlay = (video) => {
     video.muted = true;
-    video.playsInline = true;
+    video.defaultMuted = true;
     video.autoplay = true;
     video.loop = true;
+    video.playsInline = true;
+    video.setAttribute("muted", "");
+    video.setAttribute("autoplay", "");
+    video.setAttribute("loop", "");
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "");
 
-    video.play().catch((error) => {
-      console.error("Autoplay failed:", error);
-    });
+    const playPromise = video.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(() => {});
+    }
+  };
+
+  videos.forEach((video) => {
+    tryPlay(video);
+    video.addEventListener("loadedmetadata", () => tryPlay(video), { once: true });
+    video.addEventListener("canplay", () => tryPlay(video), { once: true });
   });
+
+  const kickstartPlayback = () => videos.forEach((video) => tryPlay(video));
+  window.addEventListener("pageshow", kickstartPlayback);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+      kickstartPlayback();
+    }
+  });
+  document.addEventListener("touchstart", kickstartPlayback, { once: true, passive: true });
+  document.addEventListener("click", kickstartPlayback, { once: true });
 });
 
 // Smooth scrolling for anchor links
@@ -181,18 +205,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const videos = document.querySelectorAll(".homevid");
-  videos.forEach(video => {
-    video.play().catch(err => console.error("Autoplay failed:", err));
-  });
-});
-
 // Contact Modal Functionality
 document.addEventListener("DOMContentLoaded", () => {
   const openBtn = document.getElementById("openModal");
   const modal = document.querySelector(".contact-modal");
   const closeBtn = document.querySelector(".close-modal");
+
+  if (!openBtn || !modal || !closeBtn) {
+    return;
+  }
 
   openBtn.addEventListener("click", () => {
     modal.classList.add("active");
@@ -209,4 +230,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
