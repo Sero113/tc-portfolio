@@ -19,6 +19,34 @@ function closeMenu() {
   navMenu.classList.remove("active");
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.querySelector(".navbar");
+  if (!navbar) return;
+
+  let clock = navbar.querySelector(".nav-clock");
+  if (!clock) {
+    clock = document.createElement("span");
+    clock.className = "nav-clock";
+    clock.setAttribute("aria-live", "polite");
+    navbar.appendChild(clock);
+  }
+
+  const updateClock = () => {
+    const now = new Date();
+    const time = now.toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true
+    });
+    if (clock) {
+      clock.innerHTML = `Richmond Hill <span class="nav-clock-sep">+</span> ${time}`;
+    }
+  };
+
+  updateClock();
+  setInterval(updateClock, 1000);
+});
+
 document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('.fade-in-section');
 
