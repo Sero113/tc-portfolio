@@ -1805,6 +1805,14 @@ footer {
   .contact-info p {
     margin: 5px 0;
   }
+
+  .contact-info p:first-child {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
   
   .contact-info a {
     color: #fff;
