@@ -1959,9 +1959,9 @@ footer {
     .hamburger {
         display: block;
         cursor: pointer;
-        background-color: #ffffff;
+        background-color: transparent;
         border: none;
-        width: 50px;
+        width: auto;
     }
 
     
@@ -1987,7 +1987,7 @@ footer {
         padding: 1rem; /* Add consistent padding for all nav items */
     }
     .bar{
-        background-color: #000000;
+        background-color: #ffffff;
     }
 
     .neonText-video img {
@@ -2220,7 +2220,7 @@ font-weight: var(--primary-font);
 
    
     .banner{
-        height: 250px;
+        height: auto;
         width: auto;
     }
     
@@ -2266,9 +2266,22 @@ font-weight: var(--primary-font);
     }
     
 
+    .banner h3 {
+        text-align: left;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 1.2;
+        font-family: var(--primary-font);
+    }
+
     .banner h4{
-        font-size: 1.5rem;
-       padding: 10px 20px 0 0px;
+        text-align: left !important;
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: #ffffff;
+        width: 100%;
+        line-height: 1.45;
+        padding: 0;
     }
 
     .banner br{
@@ -2278,6 +2291,18 @@ font-weight: var(--primary-font);
 
     .nav-text{
         display: none;
+    }
+
+    .neonText {
+        position: relative;
+        z-index: 2;
+        padding-left: 50px;
+        color: white;
+        max-width: 100%;
+    }
+
+    .neonText span{
+        font-size: 1.5rem;
     }
     
 
