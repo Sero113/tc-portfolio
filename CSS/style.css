@@ -55,6 +55,12 @@ body {
     height: 100%;
 }
 
+body.home-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 body.site-locked {
     overflow: hidden;
 }
@@ -2047,6 +2053,18 @@ font-weight: var(--font-book);
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+.home-page .banner {
+  position: relative;
+  z-index: 0;
+  flex: 0 0 auto;
+}
+
+.home-page .site-footer {
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
 }
 
 .homevid-cover::before {
