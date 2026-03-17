@@ -1,3 +1,156 @@
+(() => {
+  const SITE_GATE_PASSWORD = "7899286";
+  const GATE_SESSION_KEY = "tc-portfolio-unlocked";
+  const INDEX_PAGE = "index.html";
+
+  const isUnlocked = sessionStorage.getItem(GATE_SESSION_KEY) === "true";
+  window.__tcSiteUnlocked = isUnlocked;
+
+  const runPreloaderSequence = (onComplete) => {
+    const preloader = document.getElementById("preloader");
+    const preloaderVideo = preloader?.querySelector("video");
+
+    if (!preloader) {
+      if (typeof onComplete === "function") {
+        onComplete();
+      }
+      return;
+    }
+
+    preloader.style.display = "flex";
+    preloader.style.opacity = "1";
+    preloader.style.pointerEvents = "auto";
+
+    if (preloaderVideo) {
+      preloaderVideo.currentTime = 0;
+      const playPromise = preloaderVideo.play();
+      if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(() => {});
+      }
+    }
+
+    window.setTimeout(() => {
+      preloader.style.opacity = "0";
+      preloader.style.pointerEvents = "none";
+    }, 2000);
+
+    window.setTimeout(() => {
+      preloader.style.display = "none";
+      if (typeof onComplete === "function") {
+        onComplete();
+      }
+    }, 2200);
+  };
+
+  const kickstartVideos = () => {
+    const videos = document.querySelectorAll("video[autoplay], .autoplay-video, .homevid, .preloader-video");
+    videos.forEach((video) => {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.autoplay = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.setAttribute("muted", "");
+      video.setAttribute("autoplay", "");
+      video.setAttribute("loop", "");
+      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
+
+      const playPromise = video.play();
+      if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(() => {});
+      }
+    });
+  };
+
+  const pauseVideosWhileLocked = () => {
+    document.querySelectorAll("video").forEach((video) => {
+      video.pause();
+      video.removeAttribute("autoplay");
+    });
+  };
+
+  window.__tcRunPreloaderSequence = runPreloaderSequence;
+  window.__tcKickstartVideos = kickstartVideos;
+
+  const path = window.location.pathname;
+  const currentPage = path.split("/").pop() || INDEX_PAGE;
+  const isIndexPage = currentPage === INDEX_PAGE;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.__tcSiteUnlocked) {
+      return;
+    }
+
+    if (!isIndexPage) {
+      const nextTarget = `${INDEX_PAGE}?next=${encodeURIComponent(currentPage + window.location.search + window.location.hash)}`;
+      window.location.replace(nextTarget);
+      return;
+    }
+
+    const nextPage = new URLSearchParams(window.location.search).get("next");
+    document.body.classList.add("site-locked");
+    pauseVideosWhileLocked();
+
+    const gate = document.createElement("div");
+    gate.className = "site-gate";
+    gate.innerHTML = `
+      <div class="site-gate-backdrop"></div>
+      <form class="site-gate-card" autocomplete="off">
+        <p class="site-gate-kicker">Private Access</p>
+        <h1>Taylor Camacho's Portfolio</h1>
+        <p class="site-gate-note">Reach out directly to receive the password.</p>
+        <p>Enter the password to continue.</p>
+        <label class="site-gate-label" for="site-password">Password</label>
+        <div class="site-gate-row">
+          <input id="site-password" class="site-gate-input" type="password" name="password" autocomplete="current-password" />
+          <button class="site-gate-button" type="submit">Enter</button>
+        </div>
+        <p class="site-gate-error" aria-live="polite"></p>
+      </form>
+    `;
+
+    document.body.appendChild(gate);
+
+    const form = gate.querySelector(".site-gate-card");
+    const input = gate.querySelector(".site-gate-input");
+    const error = gate.querySelector(".site-gate-error");
+
+    if (!form || !input || !error) {
+      return;
+    }
+
+    input.focus();
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (input.value === SITE_GATE_PASSWORD) {
+        sessionStorage.setItem(GATE_SESSION_KEY, "true");
+        window.__tcSiteUnlocked = true;
+        document.body.classList.remove("site-locked");
+        document.body.classList.add("site-authenticating");
+        gate.remove();
+
+        if (nextPage && nextPage !== INDEX_PAGE) {
+          window.location.replace(nextPage);
+          return;
+        }
+
+        runPreloaderSequence(() => {
+          document.body.classList.remove("site-authenticating");
+          kickstartVideos();
+          window.history.replaceState({}, document.title, INDEX_PAGE);
+        });
+        return;
+      }
+
+      error.textContent = "Incorrect password.";
+      input.select();
+    });
+  });
+})();
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -64,6 +217,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  if (!window.__tcSiteUnlocked) {
+    return;
+  }
+
   const videos = document.querySelectorAll("video[autoplay], .autoplay-video, .homevid, .preloader-video");
   const tryPlay = (video) => {
     video.muted = true;
@@ -182,16 +339,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("load", function () {
-  const preloader = document.getElementById("preloader");
+  if (!window.__tcSiteUnlocked) {
+    return;
+  }
 
-  setTimeout(() => {
-    preloader.style.opacity = "0";
-    preloader.style.pointerEvents = "none";
-  }, 2000);
-
-  setTimeout(() => {
-    preloader.style.display = "none";
-  }, 2200);
+  if (typeof window.__tcRunPreloaderSequence === "function") {
+    window.__tcRunPreloaderSequence();
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
