@@ -1,10 +1,5 @@
 (() => {
-  const SITE_GATE_PASSWORD = "7899286";
-  const GATE_SESSION_KEY = "tc-portfolio-unlocked";
-  const INDEX_PAGE = "index.html";
-
-  const isUnlocked = sessionStorage.getItem(GATE_SESSION_KEY) === "true";
-  window.__tcSiteUnlocked = isUnlocked;
+  window.__tcSiteUnlocked = true;
 
   const runPreloaderSequence = (onComplete) => {
     const preloader = document.getElementById("preloader");
@@ -63,92 +58,8 @@
     });
   };
 
-  const pauseVideosWhileLocked = () => {
-    document.querySelectorAll("video").forEach((video) => {
-      video.pause();
-      video.removeAttribute("autoplay");
-    });
-  };
-
   window.__tcRunPreloaderSequence = runPreloaderSequence;
   window.__tcKickstartVideos = kickstartVideos;
-
-  const path = window.location.pathname;
-  const currentPage = path.split("/").pop() || INDEX_PAGE;
-  const isIndexPage = currentPage === INDEX_PAGE;
-
-  document.addEventListener("DOMContentLoaded", () => {
-    if (window.__tcSiteUnlocked) {
-      return;
-    }
-
-    if (!isIndexPage) {
-      const nextTarget = `${INDEX_PAGE}?next=${encodeURIComponent(currentPage + window.location.search + window.location.hash)}`;
-      window.location.replace(nextTarget);
-      return;
-    }
-
-    const nextPage = new URLSearchParams(window.location.search).get("next");
-    document.body.classList.add("site-locked");
-    pauseVideosWhileLocked();
-
-    const gate = document.createElement("div");
-    gate.className = "site-gate";
-    gate.innerHTML = `
-      <div class="site-gate-backdrop"></div>
-      <form class="site-gate-card" autocomplete="off">
-        <p class="site-gate-kicker">Private Access</p>
-        <h1>Taylor Camacho's Portfolio</h1>
-        <p class="site-gate-note">Reach out directly to receive the password.</p>
-        <p>Enter the password to continue.</p>
-        <label class="site-gate-label" for="site-password">Password</label>
-        <div class="site-gate-row">
-          <input id="site-password" class="site-gate-input" type="password" name="password" autocomplete="current-password" />
-          <button class="site-gate-button" type="submit">Enter</button>
-        </div>
-        <p class="site-gate-error" aria-live="polite"></p>
-      </form>
-    `;
-
-    document.body.appendChild(gate);
-
-    const form = gate.querySelector(".site-gate-card");
-    const input = gate.querySelector(".site-gate-input");
-    const error = gate.querySelector(".site-gate-error");
-
-    if (!form || !input || !error) {
-      return;
-    }
-
-    input.focus();
-
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      if (input.value === SITE_GATE_PASSWORD) {
-        sessionStorage.setItem(GATE_SESSION_KEY, "true");
-        window.__tcSiteUnlocked = true;
-        document.body.classList.remove("site-locked");
-        document.body.classList.add("site-authenticating");
-        gate.remove();
-
-        if (nextPage && nextPage !== INDEX_PAGE) {
-          window.location.replace(nextPage);
-          return;
-        }
-
-        runPreloaderSequence(() => {
-          document.body.classList.remove("site-authenticating");
-          kickstartVideos();
-          window.history.replaceState({}, document.title, INDEX_PAGE);
-        });
-        return;
-      }
-
-      error.textContent = "Incorrect password.";
-      input.select();
-    });
-  });
 })();
 
 const hamburger = document.querySelector(".hamburger");
@@ -171,6 +82,37 @@ function closeMenu() {
   hamburger.classList.remove("active");
   navMenu.classList.remove("active");
 }
+
+// Smoothly transition between the main dark theme and the inverted Alter page.
+document.querySelectorAll('.nav-link[href="alter.html"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (document.body.classList.contains("alter-page") || event.metaKey || event.ctrlKey) return;
+
+    event.preventDefault();
+    document.body.classList.add("alter-theme-entering");
+    window.setTimeout(() => {
+      window.location.href = link.href;
+    }, 620);
+  });
+});
+
+if (document.body.classList.contains("alter-page")) {
+  document.querySelectorAll(".nav-link:not([href=\"alter.html\"]), .nav-logo").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (event.metaKey || event.ctrlKey) return;
+
+      event.preventDefault();
+      document.body.classList.add("alter-theme-leaving");
+      window.setTimeout(() => {
+        window.location.href = link.href;
+      }, 620);
+    });
+  });
+}
+
+window.addEventListener("pageshow", () => {
+  document.body.classList.remove("alter-theme-entering", "alter-theme-leaving");
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector(".navbar");
