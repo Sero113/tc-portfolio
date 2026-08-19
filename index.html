@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/style.css?v=20260812-2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -22,11 +22,7 @@
     <header class="header">
         <nav class="navbar">
             <a href="index.html" class="nav-logo">
-                <img src="/images/TC-logo-white.webp" alt="Logo">
-                <div class="nav-text">
-                    <h6>Taylor Camacho</h6>
-                    <p>Graphic Designer</p>
-                </div>
+                <span>Taylor</span>
             </a>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -37,6 +33,9 @@
                 </li>
                 <li class="nav-item">
                     <a href="about-me.html" class="nav-link nav-link-ltr">Info</a>
+                </li>
+                <li class="nav-item">
+                    <a href="alter.html" class="nav-link nav-link-ltr">Alter</a>
                 </li>
                 <li class="nav-item">
                     <a href="contact.html" class="nav-link nav-link-ltr-1">Contact</a>
@@ -53,27 +52,70 @@
         </nav>
 </header>
 
-<section class="banner text-focus-in">
-  <div class="homevid-cover">
-    <video class="homevid autoplay-video" autoplay muted playsinline webkit-playsinline loop preload="auto">
+<main class="home-editorial text-focus-in">
+  <section class="home-statement" aria-labelledby="home-statement-title">
+    <video class="home-editorial-video autoplay-video" autoplay muted playsinline webkit-playsinline loop preload="auto" aria-hidden="true">
       <source src="/images/Smooth-gradiant-2026.mp4" type="video/mp4">
     </video>
-
-
-    <div class="neonText">
-      <h3>Hi, I'm Taylor Camacho</h3>
-      <h4>
-        <span class="hero-title-line">A Toronto-based <span class="highlight hero-role">Graphic Designer</span>.</span>
-        <span class="hero-subline">Branding, identity, and visually driven design
-             that helps ideas stand out and feel intentional.</span>
-      </h4>
-      <a href="projects.html" class="view-work-button">View Work</a>
-
+    <h1 id="home-statement-title">Good design makes ideas clear. What can we create together?</h1>
+    <div class="home-statement-note">
+      <p><strong>Good design solves the right problem.</strong><br>Designer working across visual identity, digital experiences and product.</p>
+      <a href="#featured-work">Featured work <span aria-hidden="true">↓</span></a>
     </div>
-  </div>
-  
-  
-</section>
+  </section>
+
+  <section class="home-featured-projects" id="featured-work" aria-labelledby="featured-projects-title">
+    <div class="home-featured-projects-heading">
+      <p>Selected work</p>
+      <h2 id="featured-projects-title">Featured projects</h2>
+      <a href="projects.html">View all projects <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <div class="home-project-grid">
+      <article class="home-project-card">
+        <a href="nork.html" aria-label="View the NORK brand identity project">
+          <div class="home-project-image">
+            <img src="/images/Nork/nork-thumbnail.webp" alt="NORK outdoor lifestyle brand identity">
+            <div class="home-project-card-meta">
+              <h3>NORK</h3>
+              <p>Brand Identity</p>
+              <span aria-hidden="true">↗</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="home-project-card">
+        <a href="ascentix.html" aria-label="View the Ascentix brand identity project">
+          <div class="home-project-image">
+            <img src="/images/Ascentix/ascentix-thumbnail.webp" alt="Ascentix winter apparel brand identity">
+            <div class="home-project-card-meta">
+              <h3>Ascentix</h3>
+              <p>Brand Identity</p>
+              <span aria-hidden="true">↗</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="home-project-card">
+        <a href="vault.html" aria-label="View the Vault digital product project">
+          <div class="home-project-image">
+            <img src="/images/Vault/Vault-thumbnail.webp" alt="Vault personal finance digital product">
+            <div class="home-project-card-meta">
+              <h3>Vault</h3>
+              <div class="home-project-types" aria-label="Project types">
+                <span>Product Design</span>
+                <span>Visual Design</span>
+              </div>
+              <span aria-hidden="true">↗</span>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+  </section>
+</main>
 
 
 
