@@ -4786,3 +4786,96 @@ body.pill-nav .what-is-about-2 img {
   .about-card-wide { margin-top: 0; }
   .about-card-wide img { aspect-ratio: 1 / 1; }
 }
+
+
+/* =====================================================================
+   Home page: square-cornered project cards with the name and type under
+   the image. Applies only to <body class="home-page home-refresh ...">.
+   (Moved here from the old home-refresh.css; keep at the end of the file.)
+   ===================================================================== */
+
+
+body.home-refresh .home-featured-projects > :is(.home-featured-projects-heading, .home-project-grid) {
+  width: 100%;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body.home-refresh .home-featured-projects-heading {
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+body.home-refresh .home-project-grid {
+  gap: clamp(3.5rem, 6vw, 5.5rem);
+}
+
+body.home-refresh .home-project-image {
+  contain: none;
+  aspect-ratio: auto;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+
+body.home-refresh .home-project-image::after {
+  display: none;
+}
+
+body.home-refresh .home-project-image img {
+  aspect-ratio: 2 / 1;
+  height: auto;
+  border-radius: 0;
+  transition: opacity 0.25s ease;
+}
+
+body.home-refresh .home-project-card a:hover .home-project-image img,
+body.home-refresh .home-project-card a:focus-visible .home-project-image img {
+  transform: none;
+  opacity: 0.82;
+}
+
+body.home-refresh .home-project-card-meta {
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  margin-top: 16px;
+}
+
+body.home-refresh .home-project-card-meta h3 {
+  color: #f5f5f3;
+  font-size: clamp(1.25rem, 1.6vw, 1.5rem);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+body.home-refresh .home-project-card-meta p,
+body.home-refresh .home-project-types span {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.95rem;
+  line-height: 1.2;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+body.home-refresh .home-project-types {
+  gap: 6px 14px;
+}
+
+@media (max-width: 768px) {
+  body.home-refresh .home-project-image {
+    aspect-ratio: auto;
+    border-radius: 0;
+  }
+
+  body.home-refresh .home-project-grid {
+    gap: 3rem;
+  }
+}
