@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/CSS/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="/tc-logo-black-favicon.png">
     <title>Taylor Camacho's Portfolio</title>
 </head>
-<body>
+<body class="pill-nav">
     <!-- This is The Navigation Section -->
     <header class="header">
         <nav class="navbar">
@@ -26,9 +26,6 @@
                 </li>
                 <li class="nav-item">
                     <a href="about-me.html" class="nav-link nav-link-ltr">Info</a>
-                </li>
-                <li class="nav-item">
-                    <a href="alter.html" class="nav-link nav-link-ltr">Alter</a>
                 </li>
                 <li class="nav-item">
                     <a href="contact.html" class="nav-link nav-link-ltr-1">Contact</a>
@@ -47,27 +44,49 @@
         <div class="ascentix-wrapper">
             <div class="what-is-about-me fade-in">
                 <div class="what-is-about-1">
-                    <h1>INFO</h1>
-                    <div class="about-body">
-                        <p><span>I’m a multidisciplinary designer</span> who likes <span>solving problems, exploring new ideas, and bringing a bit of my own personality into the work I create.</span>
-                        <br>
-                        <br>
-                        Outside of design, I’m into <span>fashion, gaming, tech, finance, and getting outdoors whenever I can.</span> A lot of those interests naturally influence the way I think, the things I notice, and the work I choose to make.
-                        <br>
-                        <br>
-                        <span>I’m always open to new opportunities, collaborations, or just meeting other people in the creative space.</span> If you’d ever like to connect, I’m always happy to chat over coffee<span>feel free to reach out through email or LinkedIn.</span>
-                        </p>
-                    </div>
+                    <p class="about-hello">Hey, I’m Taylor Camacho</p>
+                    <h1 class="about-title">Just someone that loves design, gaming, the outdoors, <span class="about-highlight">creative tools</span> and engaging experiences.</h1>
                     <div class="connects">
                         <span><a href="mailto:hello@taylorcamacho.com">hello@taylorcamacho.com</a></span>
-                        <span class="connect"><a href="https://drive.google.com/file/d/1uZWn0_Q8jK_vKQWdTIGhp0RCvrYe9y2d/view?usp=sharing" target="_blank">Resume</a></span>
-                        <span class="connect"><a href="https://www.linkedin.com/in/taylor-camacho-2659a51b1/" target="_blank">Linkedin</a></span>
+                        <span class="connect"><a href="https://drive.google.com/file/d/1lKKphCCBfQ_WL86lo7199AUVZSUeau4H/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></span>
+                        <span class="connect"><a href="https://www.linkedin.com/in/taylor-camacho-2659a51b1/" target="_blank" rel="noopener noreferrer">Linkedin</a></span>
                     </div>
                 </div>
                 <div class="what-is-about-2 fade-in">
-                    <img src="/images/about-Me/Tay.webp" alt="professional Potrait shot">
+                    <img src="/images/about-Me/tay-golden-gate.webp" alt="Taylor Camacho in front of the Golden Gate Bridge" width="1350" height="1800">
                 </div>
             </div>
+
+            <!-- Meet Taylor -->
+            <section class="about-more about-meet">
+                <h2 class="about-section-title">Meet Taylor</h2>
+                <div class="about-meet-text">
+                    <p>I’m a multidisciplinary designer who likes solving problems, exploring new ideas, and bringing a bit of my own personality into the work I create.</p>
+                    <p>Outside of design, I’m into fashion, gaming, tech, finance, and getting outdoors whenever I can. A lot of those interests naturally influence the way I think, the things I notice, and the work I choose to make.</p>
+                </div>
+            </section>
+
+            <!-- Outside of design: swap each .about-placeholder div for an <img> -->
+            <section class="about-more about-pleasures">
+                <h2 class="about-section-title">Outside of Design</h2>
+                <div class="about-cards">
+                    <figure class="about-card">
+                        <img src="/images/about-Me/ramen.webp" alt="Bowl of ramen topped with chashu pork, a soft-boiled egg and green onions" width="1600" height="2133" loading="lazy">
+                        <h3>Ramen</h3>
+                        <p>One of my favourite meals, and my go-to after work.</p>
+                    </figure>
+                    <figure class="about-card">
+                        <img src="/images/about-Me/silver-angels-boxes.webp" alt="Two Silver Angels rings in black branded gift boxes beside a Silver Angels velvet pouch" width="1170" height="1544" loading="lazy">
+                        <h3>Bringing brands to life</h3>
+                        <p>A jewelry brand I made and run as a side business.</p>
+                    </figure>
+                    <figure class="about-card about-card-wide">
+                        <img src="/images/about-Me/kyoto.webp" alt="Sunset over a busy street in Kyoto, Japan, seen from the top of a stone staircase" width="2000" height="2667" loading="lazy">
+                        <h3>Travel</h3>
+                        <p>I love to travel. This one was taken in Kyoto, Japan.</p>
+                    </figure>
+                </div>
+            </section>
         </div>
     </section>
     <footer class="site-footer">
@@ -82,7 +101,7 @@
         </div>
 
         <div class="site-footer-bottom">
-            <p>&copy; 2026 Taylor Camacho | Built and Developed by me in VS Code</p>
+            <p>Design + Code | &copy; 2026 Taylor Camacho</p>
             <div class="site-footer-links">
                 <a href="https://www.linkedin.com/in/taylor-camacho-2659a51b1/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a href="https://github.com/Sero113" target="_blank" rel="noopener noreferrer">Github</a>
@@ -93,5 +112,5 @@
 </footer>
     
 </body>
-<script src="/js/java.js"></script>
+<script src="/JS/java.js"></script>
 </html>
