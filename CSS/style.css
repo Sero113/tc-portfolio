@@ -4383,17 +4383,19 @@ width: 100%;
         min-height: 100vh;
         min-height: 100svh;
         flex-direction: column;
-        justify-content: flex-end;
-        padding: 1.5rem 1.25rem 2.5rem;
+        justify-content: center;
+        padding: 7rem 1.25rem 8rem;
     }
 
     .home-statement h1 {
-        margin-bottom: clamp(3rem, 10vh, 5rem);
-        font-size: clamp(3.35rem, 15vw, 5.5rem);
-        line-height: 0.91;
+        align-self: flex-start;
+        margin-bottom: clamp(2.5rem, 8vh, 4rem);
+        font-size: clamp(2.6rem, 11vw, 3.75rem);
+        line-height: 0.95;
     }
 
     .home-statement-note {
+        align-self: flex-start;
         width: 100%;
         margin-left: 0;
         padding: 0;
@@ -4660,6 +4662,12 @@ body.pill-nav .what-is-about-2 { align-items: flex-end; }
 
 body.pill-nav .what-is-about-2 img {
   max-width: 410px;
+}
+
+/* Stacked (phone) layout: centre the portrait */
+@media (max-width: 768px) {
+  body.pill-nav .what-is-about-2 { align-items: stretch; }
+  body.pill-nav .what-is-about-2 img { max-width: none; }
 }
 
 /* About: Meet Taylor + Outside of Design sections */
