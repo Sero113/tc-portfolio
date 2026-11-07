@@ -234,6 +234,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const section = document.querySelector(".mainwrapper-2");
   const miniNav = document.querySelector(".mini-nav");
 
+  if (!section || !miniNav) return;
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -257,7 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll('.uxui-work');
   const miniNav = document.querySelector('.mini-nav');
 
-  if (sections && miniNav) {
+  if (sections.length && miniNav) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -275,8 +277,6 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     sections.forEach((section) => observer.observe(section));
-  } else {
-    console.error("Unable to find the specified sections or mini-nav in the DOM.");
   }
 });
 
@@ -301,6 +301,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("scroll", function () {
   const backButton = document.querySelector(".back-button");
+  if (!backButton) return;
   if (window.scrollY > 0) {
     backButton.classList.add("active");
   } else {
@@ -354,3 +355,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+/* Floating pill menu: fade away when scrolling down, come back when scrolling up or near the top */
+(() => {
+  if (!document.body.classList.contains("pill-nav")) return;
+  const header = document.querySelector(".header");
+  if (!header) return;
+
+  const SHOW_NEAR_TOP = 80; // px from the top where the menu always shows
+  const THRESHOLD = 6;      // ignore tiny scroll jitters
+  let lastY = window.scrollY;
+
+  const update = () => {
+    const y = window.scrollY;
+    const delta = y - lastY;
+    if (y <= SHOW_NEAR_TOP) {
+      header.classList.remove("is-hidden");
+      lastY = y;
+    } else if (Math.abs(delta) > THRESHOLD) {
+      header.classList.toggle("is-hidden", delta > 0);
+      lastY = y;
+    }
+  };
+
+  window.addEventListener("scroll", update, { passive: true });
+
+  // Keyboard users tabbing into the menu always see it
+  header.addEventListener("focusin", () => header.classList.remove("is-hidden"));
+})();
