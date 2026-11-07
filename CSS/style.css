@@ -4,6 +4,639 @@
     box-sizing: border-box;
 }
 
+/* Securian Canada — environmental signage case study */
+.secure-project-card a { display: block; width: 100%; height: 100%; }
+.secure-card-art { position: relative; width: 100%; height: 100%; overflow: hidden; background: #e83b2f; color: #f7f2e8; font-family: var(--primary-font); }
+.secure-card-art::before { content: ""; position: absolute; width: 35%; height: 135%; left: 47%; top: -18%; background: #151515; transform: rotate(14deg); }
+.secure-card-wordmark { position: absolute; left: 6%; top: 9%; font-size: clamp(2rem, 5vw, 5.6rem); line-height: .9; font-weight: 800; letter-spacing: -.07em; }
+.secure-card-arrow { position: absolute; right: 6%; bottom: 7%; font-size: clamp(3rem, 7vw, 7rem); line-height: 1; }
+.secure-card-caption { position: absolute; left: 6%; bottom: 8%; max-width: 150px; font-size: .72rem; line-height: 1.25; text-transform: uppercase; letter-spacing: .12em; }
+
+.secure-page { --secure-red: #e63b2e; --secure-ink: #141414; --secure-paper: #f0ede5; background: var(--secure-paper); color: var(--secure-ink); }
+.secure-page main { overflow: hidden; }
+.secure-page .header { background: var(--secure-ink); }
+.secure-page h1, .secure-page h2, .secure-page h3, .secure-page p, .secure-page span, .secure-page dt, .secure-page dd, .secure-page small { font-family: "Inter", sans-serif; }
+.secure-page h1, .secure-page h2, .secure-page h3, .secure-page p { color: inherit; }
+.secure-section-label { font-size: .72rem !important; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; }
+.secure-hero { min-height: calc(100vh - 80px); padding: 28px clamp(20px, 4vw, 68px) 48px; background: var(--secure-red); color: #f7f2e8; display: grid; grid-template-rows: auto auto 1fr; gap: 24px; }
+.secure-hero-meta { display: flex; justify-content: space-between; border-top: 1px solid currentColor; padding-top: 10px; }
+.secure-hero-meta p { font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; }
+.secure-kicker { font-size: .76rem; text-transform: uppercase; letter-spacing: .18em; margin-bottom: 12px; }
+.secure-hero h1 { font-size: clamp(4.8rem, 12vw, 11rem); line-height: .76; letter-spacing: -.08em; font-weight: 800; }
+.secure-hero h1 span { color: var(--secure-ink); }
+.secure-hero-scene { position: relative; min-height: 470px; margin-top: 24px; background: linear-gradient(115deg, #d9d4ca 0 58%, #c7c0b5 58%); box-shadow: inset 0 -70px 80px rgba(0,0,0,.15); overflow: hidden; }
+.secure-wall-label { position: absolute; top: 28px; left: 28px; color: #46433e; font-size: .68rem; text-transform: uppercase; letter-spacing: .18em; }
+.secure-monolith { position: absolute; bottom: 0; right: 12%; width: min(330px, 55%); height: 88%; padding: 28px; background: var(--secure-ink); color: #fff; box-shadow: 18px 22px 40px rgba(0,0,0,.25); display: flex; flex-direction: column; }
+.secure-monolith .secure-maple { color: var(--secure-red); font-size: 2rem; margin-bottom: 18px; }
+.secure-monolith > strong { font-size: clamp(1.7rem, 4vw, 3.2rem); letter-spacing: -.06em; }
+.secure-directions { margin-top: auto; display: grid; grid-template-columns: 1fr auto; gap: 16px 8px; padding: 24px 0; border-top: 1px solid #555; border-bottom: 1px solid #555; font-size: .82rem; }
+.secure-monolith small { padding-top: 16px; color: #aaa; }
+.secure-intro { max-width: 1400px; margin: 0 auto; padding: 120px clamp(24px, 6vw, 90px); display: grid; grid-template-columns: 1.15fr .85fr; gap: 10vw; }
+.secure-intro h2 { max-width: 760px; margin-top: 18px; font-size: clamp(2.3rem, 5vw, 5rem); line-height: .98; letter-spacing: -.055em; font-weight: 600; }
+.secure-intro-copy > p { font-size: 1.05rem; line-height: 1.75; }
+.secure-intro dl { margin-top: 54px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; border-top: 1px solid #aaa49b; padding-top: 14px; }
+.secure-intro dt { margin-bottom: 8px; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; }
+.secure-intro dd { font-size: .78rem; line-height: 1.55; }
+.secure-statement { background: var(--secure-ink); color: var(--secure-paper); padding: 110px clamp(24px, 7vw, 110px) 130px; }
+.secure-display-copy { max-width: 1200px; margin-top: 55px; font-size: clamp(3.4rem, 8vw, 8.5rem) !important; line-height: .92 !important; letter-spacing: -.065em; font-weight: 600; }
+.secure-display-copy em { color: var(--secure-red); font-style: normal; }
+.secure-project-nav { padding: 0 clamp(24px, 6vw, 90px) 90px; display: flex; justify-content: space-between; }
+.secure-project-nav a { color: var(--secure-ink); font-size: .82rem; border-bottom: 1px solid currentColor; padding-bottom: 4px; }
+
+@media (max-width: 768px) {
+    .secure-card-caption { display: none; }
+    .secure-hero { min-height: auto; }
+    .secure-hero h1 { font-size: clamp(4rem, 21vw, 7rem); }
+    .secure-hero-scene { min-height: 390px; }
+    .secure-monolith { right: 7%; width: 67%; height: 90%; padding: 22px; }
+    .secure-intro { grid-template-columns: 1fr; }
+    .secure-intro { padding-top: 80px; gap: 50px; }
+    .secure-project-nav { gap: 24px; }
+    .secure-project-nav a:nth-child(2) { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .secure-page .fade-in-section { opacity: 1; transform: none; transition: none; }
+}
+
+/* Shared project introduction layout */
+body.standard-layout-page .standard-project-intro {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+    align-items: start;
+    column-gap: 0;
+    row-gap: 28px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 88px 190px 72px;
+}
+
+body.standard-layout-page .standard-project-intro > .what-is-uxui-1 {
+    display: contents;
+}
+
+body.standard-layout-page .standard-project-intro > .what-is-uxui-1 > h1 {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    padding: 0;
+}
+
+body.standard-layout-page .standard-project-copy {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+}
+
+body.standard-layout-page .standard-project-copy p,
+body.standard-layout-page .standard-project-copy h2 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body.standard-layout-page .standard-project-copy p + p {
+    margin-top: 20px;
+}
+
+body.standard-layout-page .standard-project-details {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 0;
+}
+
+body.standard-layout-page .standard-project-details h6 {
+    margin: 0 0 8px;
+    padding: 0;
+    text-align: left;
+}
+
+body.standard-layout-page .standard-project-details p {
+    width: 100%;
+    margin: 0 0 38px;
+    padding: 0;
+    color: #989898;
+    line-height: 1.6;
+}
+
+body.standard-layout-page .challenge-solution ul {
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    body.standard-layout-page .standard-project-intro {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 38px;
+        margin: 0;
+        padding: 52px 24px 42px;
+    }
+
+    body.standard-layout-page .standard-project-intro > .what-is-uxui-1 > h1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    body.standard-layout-page .standard-project-copy {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    body.standard-layout-page .standard-project-details {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    body.standard-layout-page .standard-project-details p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Securian page aligned to the standard portfolio project layout */
+.securian-standard-page {
+    --secure-red: #e63b2e;
+    --secure-ink: #141414;
+    --secure-paper: #f0ede5;
+    background: #000;
+}
+
+/* =====================================================================
+   Shared case-study layout: Securian Canada, Nork, Ascentix, Vault, Smart Drive.
+   One gutter, one image gap, one section space, so every page lines up the same.
+   ===================================================================== */
+.case-study-page {
+    /* 190px at 1440px, 24px on phones; content caps at 1520px and centres on wide screens */
+    --case-gutter: max(clamp(24px, 13.2vw, 190px), calc((100% - 1520px) / 2));
+    --case-gap: 24px;            /* between images, inside every grid */
+    --case-section-space: 110px; /* between sections and before Prev/Next */
+}
+
+body.case-study-page .ascentix-wrapper {
+    width: 100%;
+    overflow-x: clip;
+}
+
+/* Intro: label above the title; title and Project Type share a top edge */
+body.case-study-page .ascentix-wrapper > .standard-project-intro {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: auto auto auto;
+    justify-content: space-between;
+    row-gap: 0;
+    margin: 0;
+    padding: 88px var(--case-gutter) 72px;
+}
+
+body.case-study-page .standard-project-intro .case-intro-label {
+    grid-column: 1;
+    grid-row: 1;
+    width: auto;
+    margin: 0 0 14px;
+    padding: 0;
+    color: #989898;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+body.case-study-page .standard-project-intro > .what-is-uxui-1 > h1 {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+    padding: 0;
+    font-size: 3rem;
+    line-height: 1.1;
+}
+
+body.case-study-page .standard-project-copy {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 40px;
+}
+
+body.case-study-page .standard-project-copy p {
+    width: 100%;
+}
+
+body.case-study-page .standard-project-details {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+}
+
+body.case-study-page .standard-project-details h6 {
+    line-height: 1.2;
+}
+
+/* Challenge / Solution on the same edge */
+body.case-study-page .challenge-solution {
+    max-width: none;
+    margin: 0 0 70px;
+}
+
+body.case-study-page .challenge-solution ul {
+    justify-content: space-between;
+    padding: 40px var(--case-gutter) 0;
+}
+
+/* Image galleries (Nork, Ascentix, Smart Drive): same edges, one gap everywhere, square corners */
+body.case-study-page :is(.development, .design, .design-2) {
+    margin: var(--case-gap) 0 0;
+    padding: 0 var(--case-gutter);
+}
+
+body.case-study-page .challenge-solution + :is(.development, .design, .design-2) {
+    margin-top: 0;
+}
+
+body.case-study-page .development {
+    display: block;
+}
+
+body.case-study-page .design {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--case-gap);
+}
+
+body.case-study-page .design-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--case-gap);
+}
+
+body.case-study-page :is(.development, .design, .design-2) :is(img, video) {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* Four-up grids hold logos and colour cards: show them whole, top-aligned */
+body.case-study-page .design {
+    align-items: start;
+}
+
+/* Two-up rows hold photos: crop to a shared height so each pair lines up */
+body.case-study-page .design-2 :is(img, video) {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Vault (long-form UX case study) on the same edges */
+body.case-study-page .uxui-work {
+    margin-top: 0;
+    padding: 0 var(--case-gutter);
+}
+
+body.case-study-page .exc {
+    text-align: left;
+}
+
+body.case-study-page .development-uxui img {
+    display: block;
+    width: 100%;
+    margin: var(--case-gap) 0 0;
+    padding: 0;
+}
+
+body.case-study-page .vid-protype {
+    padding-left: 0;
+}
+
+/* Prev / Next row: same space above it on every page */
+body.case-study-page .project-navigation {
+    margin: var(--case-section-space) 0 50px;
+}
+
+/* The "Contents" side menu only fits beside the text on wide windows */
+@media (max-width: 1199px) {
+    body.case-study-page .mini-nav {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .case-study-page {
+        --case-gutter: 24px;
+        --case-gap: 16px;
+        --case-section-space: 72px;
+    }
+
+    body.case-study-page .ascentix-wrapper > .standard-project-intro {
+        grid-template-columns: 1fr;
+        padding: 52px var(--case-gutter) 42px;
+    }
+
+    body.case-study-page .standard-project-intro > .what-is-uxui-1 > h1 {
+        font-size: 2.5rem;
+    }
+
+    body.case-study-page .standard-project-details {
+        grid-column: 1;
+        grid-row: 4;
+        margin-top: 38px;
+    }
+
+    body.case-study-page .challenge-solution {
+        margin-bottom: 44px;
+    }
+
+    body.case-study-page .challenge-solution ul {
+        padding: 28px var(--case-gutter) 0;
+        gap: 28px;
+    }
+
+    body.case-study-page .design,
+    body.case-study-page .design-2 {
+        grid-template-columns: 1fr;
+    }
+
+    body.case-study-page .design > [class^="dsn-"] {
+        grid-area: auto;
+    }
+
+    body.case-study-page .design-2 :is(img, video) {
+        height: auto;
+    }
+}
+
+/* Securian Canada — environmental graphics / EVP sections */
+
+.secure-section,
+.secure-hero-figure {
+    padding: 0 var(--case-gutter) var(--case-section-space);
+}
+
+/* The last Securian section hands its spacing to the Prev/Next row */
+.secure-section:last-of-type {
+    padding-bottom: 0;
+}
+
+.secure-hero-figure {
+    padding-bottom: 40px;
+}
+
+.secure-section-label {
+    color: #989898;
+    margin-bottom: 14px;
+}
+
+.secure-section-heading {
+    max-width: 760px;
+    margin-bottom: 44px;
+}
+
+/* Section titles match "It feels good to do good." */
+.secure-section-heading .secure-section-label {
+    color: #fff;
+    font-size: clamp(1.6rem, 2.6vw, 2.074rem) !important;
+    font-weight: var(--font-medium);
+    line-height: 1.15;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.secure-section-heading h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: var(--font-medium);
+    line-height: 1.1;
+}
+
+.secure-section-heading :is(h2, .secure-section-label) + p {
+    margin-top: 18px;
+    color: #989898;
+    line-height: 1.7;
+}
+
+/* Figures */
+.secure-figure {
+    margin: 0;
+}
+
+.secure-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.secure-figure-spaced {
+    margin-top: var(--case-gap);
+}
+
+.secure-figure figcaption {
+    margin-top: 12px;
+    color: #989898;
+    font-size: .82rem;
+    line-height: 1.5;
+}
+
+/* EVP statement: headline with the body copy underneath */
+.secure-evp {
+    padding: 32px 0;
+    margin-bottom: 24px;
+    border-top: 1px solid #343434;
+}
+
+.secure-evp h3 {
+    font-size: clamp(1.6rem, 2.6vw, 2.074rem);
+    font-weight: var(--font-medium);
+    line-height: 1.15;
+}
+
+.secure-evp p {
+    max-width: 760px;
+    margin-top: 16px;
+    color: #989898;
+    line-height: 1.7;
+}
+
+/* Strategy list */
+.secure-strategy-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    border-top: 1px solid #343434;
+}
+
+.secure-strategy-list li {
+    padding-top: 22px;
+}
+
+.secure-strategy-list h3 {
+    font-size: 1.44rem;
+    font-weight: var(--font-medium);
+    line-height: 1.25;
+}
+
+.secure-strategy-list p {
+    margin-top: 10px;
+    color: #989898;
+}
+
+/* Colour swatches */
+.secure-swatches {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--case-gap);
+    margin-top: 32px;
+}
+
+.secure-swatch-chip {
+    display: block;
+    aspect-ratio: 3 / 2;
+    margin-bottom: 14px;
+}
+
+.secure-swatch-leaf { background: #1BA548; }
+.secure-swatch-grass { background: #8DC63F; }
+.secure-swatch-pine { background: #0F7A3C; }
+
+.secure-swatch h3 {
+    font-size: 1.2rem;
+    font-weight: var(--font-medium);
+    line-height: 1.3;
+}
+
+.secure-swatch p {
+    color: #989898;
+    font-size: .88rem;
+}
+
+/* Feature wall pair */
+.secure-pair-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--case-gap);
+}
+
+.secure-pair-grid .secure-figure img {
+    aspect-ratio: 3 / 4;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Floating back button: compact, centred in the left margin so it never crowds the content */
+body.case-study-page .back-button {
+    left: calc(var(--case-gutter) / 2);
+    transform: translateX(-50%);
+    padding: 8px 14px;
+    font-size: .8rem;
+    white-space: nowrap;
+}
+
+/* Back to Work: single link styled like the existing button */
+body.case-study-page a.back-home-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .secure-hero-figure {
+        padding-bottom: 24px;
+    }
+
+    .secure-strategy-list,
+    .secure-swatches,
+    .secure-pair-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .secure-strategy-list {
+        gap: 0;
+    }
+
+    .secure-swatch-chip {
+        aspect-ratio: 3 / 1;
+    }
+}
+
+/* Nork project — text-led introduction */
+.branding-page .what-is-uxui-design.nork-project-intro {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+    align-items: start;
+    column-gap: 0;
+    row-gap: 28px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 88px 190px 72px;
+}
+
+.nork-project-intro .what-is-uxui-1 {
+    display: contents;
+}
+
+.nork-project-intro .what-is-uxui-1 h1 {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.nork-project-intro .what-is-uxui-1 p {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nork-project-details {
+    grid-column: 2;
+    grid-row: 2;
+    padding-top: 0;
+}
+
+.nork-page .challenge-solution ul {
+    justify-content: space-between;
+}
+
+.nork-project-details h6 {
+    margin: 0 0 8px;
+    padding: 0;
+    text-align: left;
+}
+
+.nork-project-details p {
+    margin: 0 0 38px;
+    padding: 0;
+    color: #989898;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .branding-page .what-is-uxui-design.nork-project-intro {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 38px;
+        margin: 0;
+        padding: 52px 24px 42px;
+    }
+
+    .nork-project-details {
+        grid-column: 1;
+        grid-row: 3;
+        padding-top: 0;
+    }
+
+    .nork-project-details p:last-child {
+        margin-bottom: 0;
+    }
+}
+
 /* Font Styles */
 :root {
     --primary-font: "PP Neue Montreal", sans-serif;
@@ -414,9 +1047,9 @@ font-family: var(--primary-font);
 .what-is-about-me {
     display: grid;
     grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.9fr);
-    gap: 28px;
+    gap: 64px;
     align-items: start;
-    padding: 60px 60px 30px;
+    padding: 88px 60px 72px;
 }
     
     .what-is-1 { grid-area: 1 / 1 / 2 / 2; }
@@ -436,23 +1069,27 @@ font-family: var(--primary-font);
     width: 100%;
     max-width: 720px;
     font-size: 1.2rem;
-    line-height: 1.28;
+    line-height: 1.55;
     font-weight: 450;
 }
 
 .about-body {
-    margin-top: 24px;
+    margin-top: 32px;
 }
 
 .about-body p {
     padding: 0 !important;
 }
 
+.about-body p + p {
+    margin-top: 1.1em;
+}
+
 .connects {
     display: grid;
     grid-template-columns: auto auto;
     gap: 14px 12px;
-    margin-top: 18px;
+    margin-top: 32px;
     justify-content: start;
 }
 
@@ -2146,7 +2783,7 @@ font-weight: var(--font-book);
 
 .home-project-card-meta h3 {
   color: #f5f5f3;
-  font-size: clamp(2rem, 4vw, 4.5rem);
+  font-size: clamp(2rem, 3vw, 3.25rem);
   font-weight: var(--font-medium);
   letter-spacing: -0.04em;
   line-height: 1.1;
@@ -3403,8 +4040,8 @@ footer {
     .what-is-about-me {
         display: grid;
         grid-template-columns: 1fr;
-        grid-row-gap: 22px;
-        padding: 26px 16px 24px;
+        grid-row-gap: 32px;
+        padding: 32px 24px 40px;
     }
         
     .what-is-about-1 { grid-area: 1 / 1 / 2 / 2; }
@@ -3432,7 +4069,7 @@ footer {
         width: 100%;
         max-width: none;
         font-size: 0.82rem;
-        line-height: 1.3;
+        line-height: 1.55;
     }
   
     
@@ -3800,4 +4437,344 @@ width: 100%;
         right: auto;
     }
 
+}
+
+/* =====================================================================
+   Floating pill menu (all Graphic Design pages): "Taylor" top-left,
+   pill menu centred, fades away on scroll down, returns on scroll up.
+   Switched on by class="pill-nav" on <body>; behaviour in JS/java.js.
+   ===================================================================== */
+body.pill-nav {
+  --pill-nav-offset: 96px; /* space kept clear for the menu on pages that start with content */
+}
+
+body.pill-nav:not(.home-page) {
+  padding-top: var(--pill-nav-offset);
+}
+
+body.pill-nav .header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background: none;
+  box-shadow: none;
+  pointer-events: none;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Soft fade behind the menu so it stays readable over content */
+body.pill-nav .header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  height: 112px;
+  background: linear-gradient(to bottom, rgba(5, 5, 5, 0.85) 0%, rgba(5, 5, 5, 0) 100%);
+  pointer-events: none;
+}
+
+body.pill-nav .header.is-hidden {
+  opacity: 0;
+  transform: translateY(-16px);
+}
+
+body.pill-nav .header.is-hidden * {
+  pointer-events: none !important;
+}
+
+body.pill-nav .navbar {
+  justify-content: center;
+  padding: max(28px, calc(env(safe-area-inset-top, 0px) + 12px)) clamp(1.5rem, 3.8vw, 4.5rem) 0;
+}
+
+body.pill-nav .nav-logo {
+  position: absolute;
+  top: calc(max(28px, calc(env(safe-area-inset-top, 0px) + 12px)) + 21.5px); /* half the pill height */
+  left: clamp(1.5rem, 3.8vw, 4.5rem);
+  transform: translateY(-50%);
+  color: #f4f4f1;
+  line-height: 1.2;
+  pointer-events: auto;
+}
+
+body.pill-nav :is(.nav-clock, .hamburger) {
+  display: none !important;
+}
+
+body.pill-nav .nav-menu {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  width: auto;
+  margin: 0;
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(20, 20, 20, 0.62);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  transition: none;
+  pointer-events: auto;
+}
+
+body.pill-nav .nav-item {
+  margin: 0;
+  padding: 0;
+}
+
+body.pill-nav .nav-link {
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  line-height: 1.2;
+  transition: color 0.2s ease;
+}
+
+/* Green dot under the current page, sitting just below the pill (outside its border) */
+body.pill-nav .nav-link::after {
+  bottom: -15px; /* 4px pill padding + 1px border + 4px gap + 6px dot */
+  width: 6px;
+  height: 6px;
+}
+
+body.pill-nav .nav-link:hover,
+body.pill-nav .nav-link:focus-visible,
+body.pill-nav .nav-link.active {
+  color: #f4f4f1;
+}
+
+/* Alter page has a light background: dark name, light fade */
+body.pill-nav.alter-page .nav-logo {
+  color: #0a0a0a;
+}
+
+body.pill-nav.alter-page .header::before {
+  background: linear-gradient(to bottom, rgba(244, 244, 240, 0.9) 0%, rgba(244, 244, 240, 0) 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.pill-nav .header {
+    transition: opacity 0.2s linear;
+  }
+
+  body.pill-nav .header.is-hidden {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body.pill-nav {
+    --pill-nav-offset: 124px;
+  }
+
+  body.pill-nav .header::before {
+    height: 132px;
+  }
+
+  /* Phones: name on its own row at the top left, pill menu centred underneath */
+  body.pill-nav .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: max(16px, calc(env(safe-area-inset-top, 0px) + 8px)) 1.25rem 0;
+  }
+
+  body.pill-nav .nav-logo {
+    position: static;
+    align-self: flex-start;
+    transform: none;
+  }
+
+  body.pill-nav .nav-menu {
+    position: static;
+    left: auto;
+    top: auto;
+    flex-direction: row;
+    width: auto;
+    text-align: left;
+  }
+
+  body.pill-nav .nav-item {
+    margin: 0;
+    padding: 0;
+  }
+
+  body.pill-nav .nav-link {
+    padding: 8px 11px;
+    font-size: 0.82rem;
+  }
+}
+
+/* Pages that open with a banner image: the menu floats over the banner, no black bar above it */
+body.pill-nav.nav-over-banner {
+  padding-top: 0;
+}
+
+body.pill-nav.nav-over-banner .mainwrapper-2 {
+  padding-top: 0;
+}
+
+/* Lighter fade so the top of the banner isn't darkened */
+body.pill-nav.nav-over-banner .header::before {
+  background: linear-gradient(to bottom, rgba(5, 5, 5, 0.45) 0%, rgba(5, 5, 5, 0) 100%);
+}
+
+
+/* About: intro line + title */
+.what-is-about-1 p.about-hello {
+  margin: 0 0 20px;
+  padding: 0;
+  color: #a3a3a3;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: var(--font-medium);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.what-is-about-1 h1.about-title {
+  max-width: 640px;
+  font-size: clamp(1.4rem, 2vw, 1.75rem);
+  font-weight: var(--font-medium);
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.what-is-about-1 h1.about-title .about-highlight {
+  color: #62e58c;
+  font: inherit;
+}
+
+/* About portrait: a little smaller, still on the right edge */
+body.pill-nav .mainwrapper-2 > .ascentix-wrapper { width: 100%; }
+
+body.pill-nav .what-is-about-me { align-items: center; }
+
+body.pill-nav .what-is-about-2 { align-items: flex-end; }
+
+body.pill-nav .what-is-about-2 img {
+  max-width: 410px;
+}
+
+/* About: Meet Taylor + Outside of Design sections */
+.about-more {
+  margin: 0 60px;
+  padding: 72px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-more h2.about-section-title {
+  margin: 0;
+  padding: 0;
+  color: #f5f5f3;
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-weight: var(--font-medium);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.about-meet {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px 64px;
+}
+
+.about-meet-text p,
+.about-card p {
+  margin: 0;
+  padding: 0;
+  color: #a3a3a3;
+  font-size: 1.2rem;
+  line-height: 1.55;
+}
+
+.about-meet-text p + p {
+  margin-top: 1.4em;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.about-card {
+  margin: 0;
+}
+
+.about-card img,
+.about-placeholder {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.about-placeholder {
+  position: relative;
+  background: #161616;
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+}
+
+.about-placeholder::after {
+  content: "Image";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.28);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about-card h3 {
+  margin: 18px 0 6px;
+  color: #f5f5f3;
+  font-size: clamp(1.4rem, 2vw, 1.75rem);
+  font-weight: var(--font-medium);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .about-more {
+    margin: 0 24px;
+    padding: 48px 0;
+  }
+
+  .about-meet,
+  .about-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .about-cards {
+    gap: 40px;
+    margin-top: 32px;
+  }
+}
+
+/* Third card spans the full width, like a wide feature shot */
+.about-card-wide {
+  grid-column: 1 / -1;
+  margin-top: 24px;
+}
+
+.about-card-wide img {
+  aspect-ratio: 16 / 9;
+  object-position: center 62%;
+}
+
+@media (max-width: 768px) {
+  .about-card-wide { margin-top: 0; }
+  .about-card-wide img { aspect-ratio: 1 / 1; }
 }
